@@ -2,7 +2,7 @@ import React from 'react';
 
 import { CustomInput1, CustomDropDown1 } from "../components"
 
-import banner from "../banner.jpg"
+import banner from "../images/product1.jpeg"
 const Banner = () => {
     const State = [
         {

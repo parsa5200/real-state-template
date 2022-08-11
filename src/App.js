@@ -1,3 +1,5 @@
+import React from 'react';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.scss';
 import FlatDetail from "./components/FlatDetail"
 import Header from "./components/Header"
@@ -9,13 +11,12 @@ import Blog from "./components/Blog"
 import BlogDetail from "./components/BlogDetail"
 import HeaderIcon from './components/HeaderIcon';
 import AddProperty from './components/AddProperty';
-import { BrowserRouter, Router, Route } from "react-router-dom";
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <HeaderIcon />
-      <Header />
-      <Router>
+      {/* <Header /> */}
+      {/* <Routes>
         <Route path="/" exact component={Home}       ></Route>
         <Route path="/contact" component={Contact}    ></Route>
         <Route path="/about" component={About}      ></Route>
@@ -23,10 +24,12 @@ function App() {
         <Route path="/blog/:id" component={BlogDetail} ></Route>
         <Route path="/flat/:slug" component={FlatDetail} ></Route>
         <Route path="/AddProperty" component={AddProperty}></Route>
-      </Router>
-      <Footer />
+      </Routes> */}
+      {/* <Footer /> */}
+
     </BrowserRouter>
   );
-}
+
+};
 
 export default App;
