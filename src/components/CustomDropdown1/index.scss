@@ -1,0 +1,50 @@
+.custom-dropDown-container {
+  padding: 12px;
+  position: relative;
+
+  .dd-selection {
+    background-color: #fff;
+    padding: 10px 16px;
+    border-radius: 5px;
+    width: 300px;
+    border: 1px solid silver;
+    cursor: pointer;
+    position: relative;
+    &::after {
+      display: block;
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-right: 2px solid #0003;
+      border-bottom: 2px solid #0003;
+      transform: rotate(45deg);
+      transition: .3s;
+      position: absolute;
+      right: 15px;
+      top: 12px;
+    }
+  }
+  .visible::after {
+    transform: rotate(-135deg);
+    top: 15px;
+  }
+
+  .dd-itemHolder {
+    transform: scale(0);
+
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid silver;
+    position: absolute;
+    top: 100%;
+    line-height: 1.5rem;
+    width: 300px;
+    div {
+      padding: 10px 16px;
+      cursor: pointer;
+      &:hover {
+        background-color: #0004;
+      }
+    }
+  }
+}
