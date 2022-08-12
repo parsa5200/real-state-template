@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './Register.scss'
 import { CustomInput1 } from "../../components"
 import { validate } from "../validate"
 import 'react-toastify/dist/ReactToastify.css';
@@ -35,7 +36,7 @@ const FirstRegister = () => {
     return (
         <div className='formContainer'>
             <form onSubmit={submitHandler}>
-                <h5>ورود / ثبت نام</h5>
+                <h5 className='formLabel'>ورود / ثبت نام</h5>
                 <span className='description'>برای ورود با ثبت نام شماره خود را وارد کنید</span>
                 <div className='formField'>
                     <CustomInput1
@@ -54,7 +55,7 @@ const FirstRegister = () => {
                     {errors.phoneNumber && touched.phoneNumber && <span className='errorText' >{errors.phoneNumber}</span>}
                 </div>
                 <div className='formButtons'>
-                    <button type='submit' >ادامه</button>
+                    <button className='registerButton' type='submit' >ادامه</button>
                 </div>
             </form>
         </div>

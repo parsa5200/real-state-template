@@ -1,0 +1,75 @@
+.header {
+  background-color: #f7f7f7;
+  line-height: 2rem;
+}
+
+.navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.navbar-brand {
+  padding: 0;
+}
+
+.nav-item {
+  position: relative;
+  padding: 15px 2px;
+  cursor: pointer;
+}
+
+.nav-link {
+  font-size: 14px;
+  font-weight: 600;
+  width: 7rem;
+  color: #27282e;
+  text-align: center;
+  border-radius: 10px;
+  &:hover {
+    background-color: #bc8e10;
+    color: whitesmoke;
+  }
+}
+
+
+.nav-item:hover .sub-ul {
+  display: block;
+  cursor: pointer;
+}
+
+.nav-item .fa-chevron-down {
+  font-size: 14px;
+}
+
+.sub-ul li:hover {
+  background: #ebb51e;
+  color: #364465;
+  border-radius: 5px;
+}
+
+.header .sub-ul {
+  background: white;
+  position: absolute;
+  display: none;
+  padding: 0;
+  width: 190px;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  top: 79px;
+  box-shadow: 0 0 18px rgb(0 0 0 / 38%);
+  z-index: 10;
+}
+
+.sub-ul li {
+  list-style: none;
+  font-weight: 600;
+  padding: 5px 15px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.sub-ul a {
+  color: inherit;
+  text-decoration: none;
+}

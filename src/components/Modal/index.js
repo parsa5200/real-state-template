@@ -1,5 +1,4 @@
-import { useState } from "react";
-import "./index.scss";
+import styles from './modal.module.scss';
 const Modal = ({
   open,
   onClose,
@@ -13,22 +12,22 @@ const Modal = ({
 }) => {
   if (!open) return null;
   return (
-    <section onClick={onClose} id="overly">
+    <section onClick={onClose} id={styles.overly}>
       <div
         onClick={(e) => {
           e.stopPropagation();
         }}
         className={`${className ? className : "modal-container"}`}
       >
-        <div className="modal-header">
-          <div className="closeBtn" onClick={onClose}>
-          <i className="fa-solid fa-xmark"></i>
+        <div className={styles.modalHeader}>
+          <div className={styles.closeBtn} onClick={onClose}>
+            <i className="fa-solid fa-xmark"></i>
           </div>
           <div className="header-title">{headerTitle}</div>
         </div>
-        <div className="modal-body">{children}</div>
+        <div className={styles.modalBody}>{children}</div>
         {hasFooter &&
-          <div className="modal-footer">
+          <div className={styles.modalFooter}>
             {footerChild}
           </div>}
       </div>

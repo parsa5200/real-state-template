@@ -1,0 +1,45 @@
+#overly {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  background-color: rgba($color: #000000, $alpha: 0.6);
+  z-index: 9999;
+  height: 125vh;
+  .modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    border-bottom: none;
+    .closeBtn {
+      cursor: pointer;
+      i {
+        color: #F1C95B;
+        font-size: 25px;
+        font-weight: 500;
+        margin-left: 10px;
+        transition: all .2s ease-in;
+        &:hover {
+          color: #FE4E00;
+        }
+      }
+    }
+  }
+  .modalBody {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 0;
+  }
+  .modalFooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+  }
+}

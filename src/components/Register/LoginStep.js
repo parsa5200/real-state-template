@@ -39,7 +39,7 @@ const LoginStep = () => {
                     <button className='backButton' ><i class="fa-light fa-circle-chevron-left"></i></button>
                     <span className='showNumber'>09381655200</span>
                 </div>
-                <h5>ورود</h5>
+                <h5 className='formLabel'>ورود</h5>
                 <span className='description'>برای ورود لطفا گذرواژه را وارد کنید</span>
                 <div className='formField'>
                     <CustomInput1

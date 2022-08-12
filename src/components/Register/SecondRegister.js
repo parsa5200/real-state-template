@@ -45,7 +45,7 @@ const SecondRegister = () => {
                     <button className='backButton' ><i class="fa-light fa-circle-chevron-left"></i></button>
                     <span className='showNumber'>09381655200</span>
                 </div>
-                <h5>ثبت نام</h5>
+                <h5 className='formLabel'>ثبت نام</h5>
                 <span className='description'>لطفا مشخصات درست خودتان را وارد کنید</span>
                 <div className='formField'>
                     <CustomInput1
@@ -93,7 +93,7 @@ const SecondRegister = () => {
                     {errors.password && touched.password && <span className='errorText' >{errors.password}</span>}
                 </div>
                 <div className='formButtons'>
-                    <button type='submit' >ثبت نام</button>
+                    <button className='registerButton' type='submit' >ثبت نام</button>
                 </div>
             </form>
         </div>

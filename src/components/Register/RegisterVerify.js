@@ -39,7 +39,7 @@ const LoginStep = () => {
                     <button className='backButton' ><i class="fa-light fa-circle-chevron-left"></i></button>
                     <span className='showNumber'>09381655200</span>
                 </div>
-                <span>کد تایید 6 رقمی برای شما ارسال شد</span>
+                <span className='description'>کد تایید 6 رقمی برای شما ارسال شد</span>
                 <div className='formField'>
                     <CustomInput1
                         badgeText="کد تایید"
