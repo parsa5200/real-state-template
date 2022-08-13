@@ -1,6 +1,6 @@
 import React from "react"
-import './Header.scss'
 import { Link } from "react-router-dom"
+import './Header.scss'
 
 const Header = () => {
 
@@ -9,9 +9,13 @@ const Header = () => {
             <div className="container">
                 <nav className="navbar navbar-expand-lg navbar-light">
                     <div className="container-fluid">
-
+                        <div >
+                            <a className='socialIcon' ><i className="fa-brands fa-instagram"></i></a>
+                            <a className='socialIcon' ><i className="fa-brands fa-whatsapp"></i></a>
+                            <a className='phoneIcon' ><i className="fa-light fa-phone-rotary"> 09381655200</i></a>
+                        </div>
                         <div className="collapse navbar-collapse" id="navbarNav">
-                            <ul className="navbar-nav mx-auto">
+                            <ul className="navbar-nav ms-auto">
                                 <li className="nav-item">
                                     <Link className="nav-link" to="/contact">تماس با ما</Link>
                                 </li>

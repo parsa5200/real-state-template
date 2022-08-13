@@ -23,12 +23,7 @@ const TopHeader = () => {
                         <RegisterVerify />
                     </Modal>
                 </div>
-                <div >
-                    <a className={styles.socialIcon} ><i className="fa-brands fa-instagram"></i></a>
-                    <a className={styles.socialIcon} ><i className="fa-brands fa-whatsapp"></i></a>
-                    <a className={styles.socialIcon} ><i className="fa-brands fa-facebook"></i></a>
-                    <a className={styles.socialIcon} ><i className="fa-brands fa-github"></i></a>
-                </div>
+               
                 <Link className={styles.navbarBrand} to="/">
                     <span>
                         شاویلا
