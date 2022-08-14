@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-
-const FlatItem = ({
+import "./ProductList.scss"
+const ProductItem = ({
     slug,
     image,
     description,
@@ -11,13 +11,13 @@ const FlatItem = ({
 }) => {
     return (
         <div className="text-center col-lg-4 col-12 col-md-6 ">
-            <div className="item">
-                <div className="item-image">
-                    <img className="img-fluid" src={image} alt="flat" />
-                </div>
+            <div className="item" to={`/flat/${slug}`}>
+                <Link className="item-image" to={`/flat/${slug}`}>
+                    <img src={image} alt="flat" />
+                </Link>
                 <div className="item-description">
                     <div className="d-flex justify-content-between mb-3">
-                        <span className="item-title">{description}</span>
+                        <Link className="item-title" to={`/flat/${slug}`}>{description}</Link>
                         <span className="item-price">{price} میلیارد</span>
                     </div>
                     <div className="item-icon d-flex align-items-center justify-content-between">
@@ -25,11 +25,8 @@ const FlatItem = ({
                             <i class="fa-solid fa-location-dot"></i> <span>{location}</span>
                         </div>
                         <div>
-                            <i class="fa-solid fa-qrcode"></i> <span>{propertyCode}</span>
+                            <i class="fa-solid fa-qrcode"></i> <Link to={`/flat/${slug}`}>{propertyCode}</Link>
                         </div>
-                        <Link to={`/flat/${slug}`} className="item-title">
-                            <button className="btn btn-detail">بیشتر</button>
-                        </Link>
                     </div>
                 </div>
             </div>
@@ -37,4 +34,4 @@ const FlatItem = ({
     )
 }
 
-export default FlatItem
+export default ProductItem; 

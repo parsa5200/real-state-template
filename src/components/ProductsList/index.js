@@ -1,9 +1,9 @@
-import { data } from "./data"
-import Title from "./Title"
-import FlatItem from "./FlatItem"
+import { data } from "../data"
+import { TitleComponents, ProductItem } from "../../components"
+import FlatItem from "../ProductItem"
 import { useState } from "react"
-
-const FlatList = () => {
+import './ProductsList.scss'
+const ProductsList = () => {
     const title = {
         text: "گالری املاک شاویلا",
         description: "جدیدترین آگهی‌های شما"
@@ -16,13 +16,13 @@ const FlatList = () => {
     const slice = data.cardData.slice(0, itemPaginate)
 
     return (
-        <section className="section-all-re">
+        <section className="Products-list">
             <div className="container">
-                <Title title={title.text} description={title.description} />
+                <TitleComponents title={title.text} description={title.description} />
                 <div className="row ">
                     {slice.map((item, index) => {
                         return (
-                            <FlatItem
+                            <ProductItem
                                 slug={item.sulg}
                                 description={item.description}
                                 image={item.image}
@@ -43,4 +43,4 @@ const FlatList = () => {
 
 }
 
-export default FlatList;
+export default ProductsList;

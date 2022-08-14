@@ -1,0 +1,17 @@
+.title-area {
+  margin-bottom: 40px;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 25px;
+  border-radius: 10px;
+  .title {
+    font-size: 40px;
+    margin: 0;
+    color: #393E41;
+    font-weight: 600;
+  }
+  .title-description {
+    font-size: 15px;
+    margin: 10px 0;
+    color: #fff;
+  }
+}

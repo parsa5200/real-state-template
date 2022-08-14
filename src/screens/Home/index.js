@@ -1,8 +1,11 @@
 import React from "react";
-import { Banner } from "../../components"
+import { Banner, ProductsList } from "../../components"
 const Home = () => {
     return (
-        <Banner />
+        <>
+            <Banner />
+            <ProductsList />
+        </>
     )
 }
 

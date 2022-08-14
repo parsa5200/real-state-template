@@ -25,7 +25,6 @@ const CustomDropDown1 = ({ title, className, itemsList }) => {
 
       {/* dropdown */}
       <div
-       
         className={"dd-selection " + (isDropDownVisible ? "visible" : "")}
         onClick={(e) => {
           setIsDropDownVisible(!isDropDownVisible);
@@ -35,7 +34,9 @@ const CustomDropDown1 = ({ title, className, itemsList }) => {
           ? itemsList[selectedItemIndex].name
           : "please select item ..."}
       </div>
-      <div  ref={menuRef} className={classNames("dd-itemHolder", { "scale-up-ver-top": isDropDownVisible })}>
+      <div
+        ref={menuRef}
+        className={classNames("dd-itemHolder", { "scale-up-ver-top": isDropDownVisible })}>
         {itemsList.map((item, index) => (
           <div
             key={item.value}
@@ -53,20 +54,3 @@ const CustomDropDown1 = ({ title, className, itemsList }) => {
 };
 
 export default CustomDropDown1;
-// {isDropDownVisible ? (
-//   <div className="dd-itemHolder">
-//     {itemsList.map((item, index) => (
-//       <div
-//         key={item.value}
-//         onClick={() => {
-//           setSelectedItemIndex(index);
-//           setIsDropDownVisible(false);
-//         }}
-//       >
-//         {item.name}
-//       </div>
-//     ))}
-//   </div>
-// ) : (
-//   <></>
-// )}
