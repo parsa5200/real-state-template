@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
-import "./ProductList.scss"
+import "./ProductItem.scss"
 const ProductItem = ({
     slug,
     image,
     description,
     price,
     propertyCode,
-    location
-
+    location,
+    foundation,
+    landSize,
+    locationType
 }) => {
     return (
         <div className="text-center col-lg-4 col-12 col-md-6 ">
@@ -16,16 +18,23 @@ const ProductItem = ({
                     <img src={image} alt="flat" />
                 </Link>
                 <div className="item-description">
-                    <div className="d-flex justify-content-between mb-3">
-                        <Link className="item-title" to={`/flat/${slug}`}>{description}</Link>
-                        <span className="item-price">{price} میلیارد</span>
-                    </div>
-                    <div className="item-icon d-flex align-items-center justify-content-between">
-                        <div>
+                    <Link className="item-title" to={`/flat/${slug}`}>{description}</Link>
+                    <span className="item-price">تومان {price}</span>
+                    <div className="item-icon">
+                        {/* <div>
                             <i class="fa-solid fa-location-dot"></i> <span>{location}</span>
+                        </div> */}
+                        <div className="product-detail">
+                            <i className="fa-light fa-qrcode"></i> <Link to={`/flat/${slug}`}>{propertyCode}</Link>
                         </div>
-                        <div>
-                            <i class="fa-solid fa-qrcode"></i> <Link to={`/flat/${slug}`}>{propertyCode}</Link>
+                        <div className="product-detail">
+                            <i className="fa-light fa-map-location-dot"></i> <Link to={`/flat/${slug}`}>{locationType}</Link>
+                        </div>
+                        <div className="product-detail">
+                            <i className="fa-light fa-house-building"></i> <Link to={`/flat/${slug}`}>{foundation}</Link>
+                        </div>
+                        <div className="product-detail">
+                            <i className="fa-light fa-earth-asia"></i> <Link to={`/flat/${slug}`}>{landSize}</Link>
                         </div>
                     </div>
                 </div>

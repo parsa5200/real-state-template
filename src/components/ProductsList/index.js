@@ -3,7 +3,7 @@ import { axiosInstance } from "../../Utils/util.service"
 // const constants = require("../../Values/constants")
 
 import { TitleComponents, ProductItem } from "../../components"
-import FlatItem from "../ProductItem"
+// import FlatItem from "../ProductItem"
 import { useState } from "react"
 import "./ProductsList.scss"
 const ProductsList = () => {
@@ -29,7 +29,17 @@ const ProductsList = () => {
         <TitleComponents title={title.text} description={title.description} />
         <div className='row '>
           {slice.map((item, index) => {
-            return <ProductItem slug={item.sulg} description={item.description} image={item.image} propertyCode={item.propertyCode} price={item.price} location={item.location} />
+            return <ProductItem
+              slug={item.sulg}
+              description={item.description}
+              image={item.image}
+              propertyCode={item.propertyCode}
+              price={item.price}
+              location={item.location}
+              foundation={item.foundation}
+              landSize={item.landSize}
+              locationType={item.locationType}
+            />
           })}
         </div>
         <button className='btn-more' onClick={() => loadMore()}>
