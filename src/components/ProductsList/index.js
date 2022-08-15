@@ -6,6 +6,7 @@ import { TitleComponents, ProductItem } from "../../components"
 // import FlatItem from "../ProductItem"
 import { useState } from "react"
 import "./ProductsList.scss"
+import { Link } from "react-router-dom"
 const ProductsList = () => {
   const title = {
     text: "گالری املاک شاویلا",
@@ -17,7 +18,7 @@ const ProductsList = () => {
     return result
   }
   jafar()
-  const [itemPaginate, setItemPaginate] = useState(6)
+  const [itemPaginate, setItemPaginate] = useState(9)
   const loadMore = () => {
     setItemPaginate(itemPaginate + itemPaginate)
   }
@@ -43,9 +44,16 @@ const ProductsList = () => {
             />
           })}
         </div>
-        <button className='btn-more' onClick={() => loadMore()}>
-          موارد بیشتر
-        </button>
+        <div className="d-flex justify-content-center">
+          <button className='btn-more'>
+            موارد بیشتر
+          </button>
+        </div>
+        {/* <div className="d-flex justify-content-center">
+          <button className='btn-more' onClick={() => loadMore()}>
+            موارد بیشتر
+          </button>
+        </div> */}
       </div>
     </section>
   )

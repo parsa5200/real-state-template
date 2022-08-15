@@ -7,7 +7,7 @@
   background-size: cover !important;
   background-position: center !important;
   position: relative;
-  background-image: url("../../images/banner2.jpg");
+  background-image: url("../../images/banner3.jpg");
   .bg-custom {
     position: absolute;
     background: rgb(29 34 43 / 55%);
@@ -76,6 +76,7 @@
             transform-origin: top;
             font-size: 12px;
             font-weight: 500;
+
             div {
               padding: 10px 16px;
               cursor: pointer;
@@ -138,11 +139,12 @@
           padding: 10px 16px;
           width: 100%;
           transition: all 0.2s ease-in;
-          background: #f1c95b81;
+          background: #FE4E00;
+          color: #F7F7F7;
           text-decoration: none;
           cursor: pointer;
           &:hover {
-            background-color: #bc8e107c;
+            background-color: #BC8E10;
             color: whitesmoke;
             font-weight: bold;
           }
@@ -150,7 +152,7 @@
         .modalContainer {
           z-index: 99999;
           flex-direction: column;
-          max-width: 1000px;
+          max-width: 1100px;
           width: 100%;
           position: absolute;
           transform: translate(-50%, -50%);
@@ -160,14 +162,25 @@
           background-color: transparent;
           box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
             rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-          text-align: right;
+          text-align: center;
           .searchOptionContainer {
             display: flex;
             flex-wrap: wrap;
             flex-direction: row-reverse;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
-            gap: 10px;
+            padding: 5rem 3rem;
+          }
+          .check-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            color: #000;
+            label {
+              margin-right: 8px;
+              cursor: pointer;
+            }
           }
         }
       }

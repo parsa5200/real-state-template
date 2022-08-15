@@ -8,3 +8,4 @@ export { default as Banner } from "./Banner";
 export { default as ProductsList } from "./ProductsList";
 export { default as ProductItem } from "./ProductItem";
 export { default as TitleComponents } from "./TitleComponents";
+export { default as Footer } from "./Footer";

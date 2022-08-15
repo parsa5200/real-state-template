@@ -6,9 +6,10 @@ const CustomCheckBox1 = ({
   inputName,
   onCheckedChange,
   isChecked,
+  className
 }) => {
   return (
-    <section id="custom-checkBox-1-container">
+    <section className={`${className ? className : "custom-checkBox-1-container"}`}>
       <label htmlFor={inputName}>{title}</label>
       <input
         id={inputName}
@@ -16,7 +17,7 @@ const CustomCheckBox1 = ({
         name={inputName}
         onChange={onCheckedChange}
         value={inputValue}
-        // checked={isChecked ? true : false}
+      // checked={isChecked ? true : false}
       />
     </section>
   );
