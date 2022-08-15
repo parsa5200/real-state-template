@@ -16,25 +16,32 @@ const ProductItem = ({
             <div className="item" to={`/flat/${slug}`}>
                 <Link className="item-image" to={`/flat/${slug}`}>
                     <img src={image} alt="flat" />
+                    <div className="location-container">
+                        <span>{location}</span> <i className="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div className="share-button">
+                        <i className="fa-light fa-share-nodes"></i>
+                    </div>
+                    <div className="favorite-button">
+                        <i className="fa-light fa-bookmark"></i>
+                    </div>
                 </Link>
                 <div className="item-description">
                     <Link className="item-title" to={`/flat/${slug}`}>{description}</Link>
                     <span className="item-price">تومان {price}</span>
                     <div className="item-icon">
-                        {/* <div>
-                            <i class="fa-solid fa-location-dot"></i> <span>{location}</span>
-                        </div> */}
+
                         <div className="product-detail">
-                            <i className="fa-light fa-qrcode"></i> <Link to={`/flat/${slug}`}>{propertyCode}</Link>
+                            <Link to={`/flat/${slug}`}>{propertyCode}</Link>   <i className="fa-light fa-qrcode"></i>
                         </div>
                         <div className="product-detail">
-                            <i className="fa-light fa-map-location-dot"></i> <Link to={`/flat/${slug}`}>{locationType}</Link>
+                            <Link to={`/flat/${slug}`}>{locationType}</Link>   <i className="fa-light fa-map-location-dot"></i>
                         </div>
                         <div className="product-detail">
-                            <i className="fa-light fa-house-building"></i> <Link to={`/flat/${slug}`}>{foundation}</Link>
+                            <Link to={`/flat/${slug}`}>{landSize}</Link>    <i className="fa-light fa-earth-asia"></i>
                         </div>
                         <div className="product-detail">
-                            <i className="fa-light fa-earth-asia"></i> <Link to={`/flat/${slug}`}>{landSize}</Link>
+                            <Link to={`/flat/${slug}`}>{foundation}</Link>  <i className="fa-light fa-house-building"></i>
                         </div>
                     </div>
                 </div>

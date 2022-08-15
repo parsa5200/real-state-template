@@ -39,6 +39,7 @@ const ProductsList = () => {
               foundation={item.foundation}
               landSize={item.landSize}
               locationType={item.locationType}
+              key={index}
             />
           })}
         </div>
