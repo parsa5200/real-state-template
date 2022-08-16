@@ -2,6 +2,6 @@
 
 // module.exports = {
 //   URLS: {
-//     homePageVilaItems: `${baseUrl}/api/villas`,
+//     homePageVilaItems: `${baseUrl}/api/v1/villas`,
 //   },
 // }
