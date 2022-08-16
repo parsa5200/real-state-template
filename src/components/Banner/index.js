@@ -82,7 +82,7 @@ const Banner = () => {
             value: "superAgent",
         },
         {
-            name: "1.000.000.000",
+            name: "1.000.000.000 تا",
             value: "agent",
         },
         {
@@ -190,7 +190,7 @@ const Banner = () => {
             value: "superAgent",
         },
         {
-            name: "1.000.000.000",
+            name: "1.000.000.000 نا",
             value: "agent",
         },
         {

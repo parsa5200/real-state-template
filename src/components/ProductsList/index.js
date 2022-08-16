@@ -1,4 +1,3 @@
-import { data } from "../data"
 import { axiosInstance } from "../../Utils/util.service"
 // const constants = require("../../Values/constants")
 
@@ -13,7 +12,7 @@ const ProductsList = () => {
     description: "جدیدترین آگهی‌های شما",
   }
   async function jafar() {
-    const result = await axiosInstance({ url: "http://eflare.ir/api/villas", method: "get" })
+    const result = await axiosInstance({ url: "http://eflare.ir/api/v1/villas", method: "get" })
     console.log({ result })
     return result
   }
@@ -30,18 +29,7 @@ const ProductsList = () => {
         <TitleComponents title={title.text} description={title.description} />
         <div className='row '>
           {slice.map((item, index) => {
-            return <ProductItem
-              slug={item.sulg}
-              description={item.description}
-              image={item.image}
-              propertyCode={item.propertyCode}
-              price={item.price}
-              location={item.location}
-              foundation={item.foundation}
-              landSize={item.landSize}
-              locationType={item.locationType}
-              key={index}
-            />
+            return 
           })}
         </div>
         <div className="d-flex justify-content-center">
@@ -60,3 +48,16 @@ const ProductsList = () => {
 }
 
 export default ProductsList
+
+<ProductItem
+              slug={item.sulg}
+              description={item.description}
+              image={item.image}
+              propertyCode={item.propertyCode}
+              price={item.price}
+              location={item.location}
+              foundation={item.foundation}
+              landSize={item.landSize}
+              locationType={item.locationType}
+              key={index}
+            />
