@@ -1,14 +1,10 @@
 import React from "react";
-import { Banner, ProductsList, PropertyList } from "../../components"
-import ProductsContextProvider from '../../context/ProductsContextProvider'
+import { Banner, ProductsList} from "../../components"
 const Home = () => {
     return (
         <>
             <Banner />
             <ProductsList />
-            {/* <ProductsContextProvider>
-                <PropertyList />
-            </ProductsContextProvider> */}
         </>
     )
 }

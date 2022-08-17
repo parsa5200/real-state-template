@@ -6,7 +6,8 @@ const ProductItem = ({
     description,
     price,
     propertyCode,
-    location,
+    propertyState,
+    propertyCity,
     foundation,
     landSize,
     locationType
@@ -17,7 +18,7 @@ const ProductItem = ({
                 <Link className="item-image" to={`/flat/${slug}`}>
                     <img src={image} alt="flat" />
                     <div className="location-container">
-                        <span>{location}</span> <i className="fa-solid fa-location-dot"></i>
+                        <span>{propertyCity}</span> - <span>{propertyState}</span><i className="fa-solid fa-location-dot"></i>
                     </div>
                     <div className="share-button">
                         <i className="fa-light fa-share-nodes"></i>
@@ -28,7 +29,7 @@ const ProductItem = ({
                 </Link>
                 <div className="item-description">
                     <Link className="item-title" to={`/flat/${slug}`}>{description}</Link>
-                    <span className="item-price">تومان {price}</span>
+                    <span className="item-price">{'تومان' + price}</span>
                     <div className="item-icon">
 
                         <div className="product-detail">

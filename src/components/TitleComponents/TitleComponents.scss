@@ -1,18 +1,20 @@
 .title-area {
   margin-bottom: 40px;
-  background-color: rgba(255, 255, 255, 0.4);
+  background: rgba(29, 34, 43, 90%);
   padding: 25px;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-image: url("../../images/titelbanner2.jpg");
+
   .title {
     font-size: 40px;
     margin: 0;
-    color: #393E41;
+    color: #393e41;
     font-weight: 600;
   }
   .title-description {
     font-size: 15px;
     margin: 10px 0;
-    color: #F7F7F7;
+    color: #f7f7f7;
   }
 }
