@@ -1,27 +1,28 @@
 .custom-dropDown-container {
-  padding: 12px;
   position: relative;
+  color: #000;
 
   .dd-selection {
     background-color: #fff;
-    padding: 10px 16px;
+    padding: 14px 16px;
     border-radius: 5px;
-    width: 300px;
+    width: 100%;
     border: 1px solid silver;
     cursor: pointer;
     position: relative;
+    text-align: center;
     &::after {
       display: block;
       content: "";
       width: 10px;
       height: 10px;
-      border-right: 2px solid #0003;
-      border-bottom: 2px solid #0003;
+      border-right: 2px solid #bc8e10;
+      border-bottom: 2px solid #bc8e10;
       transform: rotate(45deg);
-      transition: .3s;
+      transition: 0.3s;
       position: absolute;
       right: 15px;
-      top: 12px;
+      top: 15px;
     }
   }
   .visible::after {
@@ -31,19 +32,26 @@
 
   .dd-itemHolder {
     transform: scale(0);
-
     background-color: #fff;
     border-radius: 5px;
     border: 1px solid silver;
     position: absolute;
-    top: 100%;
-    line-height: 1.5rem;
-    width: 300px;
+    top: 60px;
+    line-height: 0.7rem;
+    width: 90%;
+    z-index: 100;
+    transition: all 0.5s ease-in-out;
+    transform-origin: top;
+    font-size: 12px;
+    font-weight: 500;
+
     div {
       padding: 10px 16px;
       cursor: pointer;
       &:hover {
-        background-color: #0004;
+        background-color: #bc8e10;
+        color: #fff;
+        border-radius: 5px;
       }
     }
   }

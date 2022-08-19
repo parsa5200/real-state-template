@@ -1,9 +1,10 @@
 import React from 'react';
-import { ProSearch } from '../../components'
+import { ProSearch, ProductsList } from '../../components'
 const AllProductsList = () => {
     return (
         <div>
             <ProSearch />
+            <ProductsList />
         </div>
     );
 };

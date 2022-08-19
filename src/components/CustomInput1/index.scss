@@ -21,7 +21,7 @@
 //       border-right: 1px solid;
 //       height: 100%;
 //       font-size: 1.5rem;
-  
+
 //   }    padding: 0.5rem 0;
 //       padding-right: 0.5rem;
 //       color: #777777;
@@ -40,3 +40,33 @@
 //       font-size: 1.5rem;
 //     }
 // }
+
+.custom-input-1-container {
+  display: flex;
+
+  label {
+    font-weight: 500;
+    font-size: 1.045rem;
+    color: #888888;
+    margin-bottom: 0.25rem;
+  }
+  .input-wrapper {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid silver;
+    background-color: #fff;
+    width: 100%;
+
+    input {
+      font-weight: 400;
+      color: #696969;
+      background-color: transparent;
+      border: none;
+      text-align: right;
+      font-size: 1rem;
+      padding: 10px 16px;
+      width: 100%;
+    }
+  }
+}

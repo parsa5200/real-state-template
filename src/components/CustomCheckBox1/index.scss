@@ -2,10 +2,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
-
+  color: #000;
   label {
     margin-right: 8px;
     cursor: pointer;
   }
-}
+  input{
+    cursor: pointer;
+  }
+  }
+

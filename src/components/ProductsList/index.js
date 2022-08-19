@@ -1,8 +1,6 @@
-// import { axiosInstance } from "../../Utils/util.service"
-// import { baseUrl } from "../../Values/constants"
+
 import axios from 'axios'
-import { TitleComponents, ProductItem } from "../../components"
-// import FlatItem from "../ProductItem"
+import { TitleComponents, ProductItem, LoadingSvg } from "../../components"
 import { useState, useEffect } from "react"
 import "./ProductsList.scss"
 import { Link } from "react-router-dom"
@@ -22,7 +20,7 @@ const ProductsList = () => {
   }, [])
 
   if (isLoading) {
-    return <div>is loading</div>
+    return <div><LoadingSvg /></div>
   }
   return (
     <section className='Products-list'>
@@ -48,9 +46,9 @@ const ProductsList = () => {
           }
         </div>
         <div className="d-flex justify-content-center">
-          <button className='btn-more'>
+          <Link to='/productsList' className='btn-more'>
             موارد بیشتر
-          </button>
+          </Link>
         </div>
       </div>
     </section>

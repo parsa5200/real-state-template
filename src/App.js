@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.scss';
 import { TopHeader, Header, Footer } from './components';
-import { Home } from './screens'
+import { Home, AllProductsList } from './screens'
 const App = () => {
   return (
     <BrowserRouter>
@@ -10,6 +10,7 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/productsList" element={<AllProductsList />} />
       </Routes>
       <Footer />
     </BrowserRouter>

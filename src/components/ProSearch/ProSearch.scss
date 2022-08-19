@@ -1,0 +1,22 @@
+.searchOptionContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 3rem;
+  .btn-search {
+    border-radius: 5px;
+    border: 0;
+    color: #393e41;
+    padding: 10px 16px;
+    width: 100%;
+    transition: all 0.2s ease-in;
+    background: #f1c95b;
+    &:hover {
+      background-color: #bc8e10;
+      color: whitesmoke;
+      font-weight: bold;
+    }
+  }
+}
