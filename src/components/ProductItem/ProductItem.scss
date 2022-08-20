@@ -32,9 +32,21 @@
         font-weight: 800;
         margin-right: 5px;
         color: #393e41;
-        // &:hover{
-        //   color: #f7f7f7;
-        // }
+      }
+    }
+    .locationType-container {
+      right: 5px;
+      bottom: -75px;
+      &:hover {
+        span {
+          color: #f7f7f7;
+        }
+      }
+      span {
+        font-size: 12px;
+        font-weight: 800;
+        margin-right: 5px;
+        color: #393e41;
       }
     }
     .share-button {
@@ -47,7 +59,7 @@
       bottom: -105px;
       font-size: 15px;
     }
-
+    .locationType-container,
     .location-container,
     .share-button,
     .favorite-button {
@@ -74,47 +86,59 @@
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
     background-color: #f7f7f7;
-    min-height: 129px;
+    min-height: 149px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     .item-title {
-      display: block;
       font-weight: 600;
       font-size: 20px;
       color: #393e41;
       text-decoration: none;
-      margin-bottom: 14px;
       &:hover {
         color: #bc8e10;
       }
     }
-    .item-price {
-      display: block;
-      font-weight: bold;
-      font-size: 14px;
-      color: #939597;
-      margin-bottom: 14px;
-    }
-    .item-icon {
+    .description-detail {
       display: flex;
-      flex-direction: row-reverse;
-      align-items: center;
       justify-content: space-between;
-      text-align: right;
-      font-weight: 500;
-      font-size: 15px;
-      i {
-        color: #fe4e00;
+      align-items: center;
+      padding: 15px 0;
+      .item-price {
+        display: block;
+        font-weight: 500;
+        font-size: 16px;
+        color: #939597;
       }
+      .propertyType {
+        display: block;
+        font-weight: 500;
+        font-size: 16px;
+        color: #fe4e00
+      }
+    }
+  }
+
+  .item-icon {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    text-align: right;
+    font-weight: 500;
+    font-size: 15px;
+    .product-detail {
+      background-color: #f1c95b;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 12px;
       a {
         text-decoration: none;
-        color: #939597;
-        font-weight: 600;
-        &:hover {
-          color: #bc8e10;
-        }
+        color: #393e41;
+      }
+      span{
+        color: #fe4e00;
       }
     }
   }

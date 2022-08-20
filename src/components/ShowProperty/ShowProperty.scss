@@ -30,7 +30,7 @@
   .fd-item,
   .fd-sidebar-item {
     background: white;
-    padding: 35px;
+    padding: 35px 25px;
     line-height: 1.5rem;
     font-size: 15px;
     border-radius: 10px;
@@ -60,7 +60,7 @@
   }
 
   .recently-item {
-    margin-bottom: 20px;
+    margin: 20px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -69,27 +69,56 @@
     padding: 8px;
     border-radius: 10px;
     cursor: pointer;
-    img {
-      width: 70%;
-      height: 110px;
-      object-fit: cover;
-      border-radius: 10px;
+    .imageContainer {
+      position: relative;
+      img {
+        width: 100%;
+        max-height: 150px;
+        object-fit: cover;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+      .hiddenContainer {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        top: 0;
+        background-color: rgba(59, 53, 53, 50%);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        span {
+          font-weight: 800;
+          font-size: 18px;
+          color: white;
+          margin: 14px 0;
+        }
+      }
     }
-    // span {
-    //   font-weight: 600;
-    //   font-size: 13px;
-    //   display: flex;
-    //   align-items: flex-end;
-    //   flex-direction: column;
-    //   margin-left: 10px;
-    //   margin-top: 15px;
-    // }
+
     .property-detail {
-      width: 30%;
+      width: 35%;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
+      padding-right: 5px;
+    }
+    a {
+      text-decoration: none;
+      color: #393e41;
+      &:hover {
+        color: #f1c95b;
+      }
+    }
+    i {
+      color: #bc8e10;
+    }
+    span {
+      font-weight: 600;
+      color: #bc8e10;
     }
   }
 

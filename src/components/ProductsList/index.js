@@ -41,6 +41,9 @@ const ProductsList = () => {
                 landSize={item.size_of_land}
                 locationType={item.city.province.name}
                 key={item.id}
+                bedNumber={item.number_of_rooms}
+                constructionYear={item.year_of_construction}
+                propertyType={item.owner_name}
               />
             })
           }

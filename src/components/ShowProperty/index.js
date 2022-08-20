@@ -154,38 +154,30 @@ const ShowProperty = () => {
                             <div className="col-lg-4">
                                 <div className="fd-sidebar-item">
                                     <h4>جدیدترین‌ها</h4>
+                                    
                                     <div className="recently-item">
-                                        <img src="/img/product1.jpeg" alt="detail" />
-                                        {/* <div>
-                                            <span>فروش ویلای لوکس در رامسر</span>
-                                            <span>10.000.000.000 تومان</span>
-                                        </div> */}
-                                    </div>
-                                    <div className="recently-item">
-                                        <img src="/img/product1.jpeg" alt="detail" />
-                                        {/* <div>
-                                            <span>فروش زمین دو بر در رامسر</span>
-                                            <span>10.000.000.000 تومان</span>
-                                        </div> */}
-                                    </div>
-                                    <div className="recently-item">
-                                        <img src="/img/product1.jpeg" alt="detail" />
-                                        {/* <div>
-                                            <span>فروش ویلا 400متری در رامسر</span>
-                                            <span>10.000.000.000 تومان</span>
-                                        </div> */}
+                                        <Link className="imageContainer" to="/">
+                                            <img src="/img/product1.jpeg" alt="detail" />
+                                            <div className="hiddenContainer">
+                                                <span>فروش ویلا 400متری در رامسر</span>
+                                                <span>10.000.000.000 تومان</span>
+                                            </div>
+                                        </Link>
                                         <div className="property-detail">
                                             <div className="product-detail">
-                                                <Link to="/" >2211444</Link>   <i className="fa-light fa-qrcode"></i>
+                                                <Link to="/" >1387</Link>  <span>: سال بنا</span>
                                             </div>
                                             <div className="product-detail">
-                                                <Link to="/" >شهری</Link>   <i className="fa-light fa-map-location-dot"></i>
+                                                <Link to="/" >4</Link>   <span>: خواب</span>
                                             </div>
                                             <div className="product-detail">
-                                                <Link to="/" >2345</Link>    <i className="fa-light fa-earth-asia"></i>
+                                                <Link to="/" >2345m</Link>  <span>: متراژ</span>
                                             </div>
                                             <div className="product-detail">
-                                                <Link to="/" >527</Link>  <i className="fa-light fa-house-building"></i>
+                                                <Link to="/" >125m</Link>  <span>: زیربنا</span>
+                                            </div>
+                                            <div className="product-detail">
+                                                <Link to="/" >شهری</Link>  <span>: منطقه</span>
                                             </div>
                                         </div>
                                     </div>
