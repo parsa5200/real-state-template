@@ -1,48 +1,45 @@
 import { useState, useEffect, useRef } from "react";
 import "./index.scss";
 import classNames from "classnames";
-const CustomDropDown1 = ({ title, className, itemsList }) => {
+const CustomDropDown1 = ({ title, className, itemsList,  onSelect, defaultValue, selected }) => {
+  console.log({ defaultValue, selected });
   //flag to show dropdown menu
-  const [isDropDownVisible, setIsDropDownVisible] = useState(false);
+  // const [isDropDownVisible, setIsDropDownVisible] = useState(false);
 
   //list of dropdown items
   //reference /index to user selected element
-  const [selectedItemIndex, setSelectedItemIndex] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const menuRef = useRef()
+  const menuRef = useRef();
 
   useEffect(() => {
     document.addEventListener("mousedown", (e) => {
+      console.log({ menuRef });
       if (!menuRef.current.contains(e.target)) {
-        setIsDropDownVisible(false)
+        console.warn("salam");
+        setIsOpen(false);
       }
-    })
-  }, [])
-
-
+    });
+  }, []);
   return (
-    <section className={`${className ? className : "custom-dropDown-container"}`}>
-
+    <section ref={menuRef} className={`${className ? className : "custom-dropDown-container"}`}>
       {/* dropdown */}
       <div
-        className={"dd-selection " + (isDropDownVisible ? "visible" : "")}
+        className={"dd-selection " + (isOpen ? "visible" : "")}
         onClick={(e) => {
-          setIsDropDownVisible(!isDropDownVisible);
+          setIsOpen(!isOpen);
         }}
       >
-        {selectedItemIndex !== null
-          ? itemsList[selectedItemIndex].name
-          : "please select item ..."}
+        {!selected?.value ? defaultValue : selected.value}
       </div>
-      <div
-        ref={menuRef}
-        className={classNames("dd-itemHolder", { "scale-up-ver-top": isDropDownVisible })}>
-        {itemsList.map((item, index) => (
+      <div className={classNames("dd-itemHolder", { "scale-up-ver-top": isOpen })}>
+        {itemsList.map((item) => (
           <div
             key={item.value}
             onClick={() => {
-              setSelectedItemIndex(index);
-              setIsDropDownVisible(false);
+              onSelect(item);
+              setIsOpen(false);
+              // onClose();
             }}
           >
             {item.name}
