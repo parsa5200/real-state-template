@@ -1,8 +1,8 @@
 import React from "react";
 import ImageGallery from 'react-image-gallery';
-
-
-const FlatDetail = () => {
+import './ShowProperty.scss'
+import { Link } from 'react-router-dom'
+const ShowProperty = () => {
     const images = [
         {
             original: '/img/product1.jpeg',
@@ -13,35 +13,31 @@ const FlatDetail = () => {
             thumbnail: '/img/banner.jpg',
         },
         {
-            original: '/img/product1.jpeg',
-            thumbnail: '/img/product1.jpeg',
+            original: '/img/banner3.jpg',
+            thumbnail: '/img/banner3.jpg',
         },
+        {
+            original: '/img/product2.jpeg',
+            thumbnail: '/img/product2.jpeg',
+        },
+
+
     ];
 
     return (
-        <div className="flat-detail">
-            {/* <div className="page-top">
-                <div className="container">
-                    <div className="row ">
-                        <div className="col-lg-12">
-                            <h1 className="page-title">DETAIL</h1>
-                            <h2 className="page-description">Lorem ipsum dolor sit amet</h2>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
+        <div className="property-detail">
             <div className="container mt-3 mb-5">
                 <div className="row">
                     <div className="col-lg-12">
-                        <div className="fd-top flat-detail-content mb-3">
+                        <div className="fd-top">
                             <div className="text-end">
                                 <h3 className="flat-detail-title">فروش ویلای استخردار لوکس در رامسر</h3>
-                                <span className="fd-price text-end">قیمت :1.000.000.000 تومان</span>
-                                </div>
-                            <div>
-                            <p className="fd-address"><i class="fa-light fa-location-dot"></i>
+                                <span className="fd-price">قیمت :1.000.000.000 تومان</span>
+                            </div>
+                            <div className="text-start">
+                                <p className="fd-address"><i className="fa-light fa-location-dot"></i>
                                     مازندران - رامسر </p>
-                            <span className="fd-address"><i class="fa-light fa-qrcode"></i>کد ملک : 44262 </span>
+                                <span className="fd-address"><i className="fa-light fa-qrcode"></i>کد ملک : 44262 </span>
                             </div>
                         </div>
                         <ImageGallery flickThreshold={0.50} slideDuration={0} items={images} showNav={true} showFullscreenButton={true} showBullets={true} showPlayButton={false} />
@@ -53,51 +49,51 @@ const FlatDetail = () => {
                                         <div className="col-lg-4">
                                             <span>مساحت زمین: </span>
                                             <span>320 متر</span>
-                                            <span><i class="fa-light fa-earth-asia ms-1"></i></span>
+                                            <span><i className="fa-light fa-earth-asia ms-1"></i></span>
                                         </div>
                                         <div className="col-lg-4">
                                             <span>مساحت بنا: </span>
                                             <span>200 متر</span>
-                                            <span><i class="fa-light fa-house ms-1"></i></span>
+                                            <span><i className="fa-light fa-house ms-1"></i></span>
                                         </div>
                                         <div className="col-lg-4">
                                             <span>تعداد طبقات:  </span>
                                             <span>2</span>
-                                            <span><i class="fa-light fa-stairs ms-1"></i></span>
+                                            <span><i className="fa-light fa-stairs ms-1"></i></span>
                                         </div>
                                     </div>
                                     <div className="row flex-row-reverse">
                                         <div className="col-lg-4">
                                             <span>تعداد خواب : </span>
                                             <span>3</span>
-                                            <span><i class="fa-light fa-bed ms-1"></i></span>
+                                            <span><i className="fa-light fa-bed ms-1"></i></span>
                                         </div>
                                         <div className="col-lg-4">
                                             <span>انشعابات: </span>
                                             <span>آب-برق-گاز</span>
-                                            <span><i class="fa-light fa-code-fork ms-1"></i></span>
+                                            <span><i className="fa-light fa-code-fork ms-1"></i></span>
                                         </div>
                                         <div className="col-lg-4">
                                             <span>نوع ملک:  </span>
                                             <span>شهری</span>
-                                            <span><i class="fa-light fa-font-awesome ms-1"></i></span>
+                                            <span><i className="fa-light fa-font-awesome ms-1"></i></span>
                                         </div>
                                     </div>
                                     <div className="row flex-row-reverse">
                                         <div className="col-lg-4">
                                             <span>نوع معامله: </span>
                                             <span>فروش</span>
-                                            <span><i class="fa-light fa-file-contract ms-1"></i></span>
+                                            <span><i className="fa-light fa-file-contract ms-1"></i></span>
                                         </div>
                                         <div className="col-lg-4">
                                             <span>نوع سند: </span>
                                             <span>شش دانگ</span>
-                                            <span><i class="fa-light fa-file ms-1"></i></span>
+                                            <span><i className="fa-light fa-file ms-1"></i></span>
                                         </div>
                                         <div className="col-lg-4">
                                             <span>چشم‌انداز:  </span>
                                             <span>کوه - دریا</span>
-                                            <span><i class="fa-light fa-binoculars ms-1"></i></span>
+                                            <span><i className="fa-light fa-binoculars ms-1"></i></span>
                                         </div>
                                     </div>
                                 </div>
@@ -159,27 +155,41 @@ const FlatDetail = () => {
                                 <div className="fd-sidebar-item">
                                     <h4>جدیدترین‌ها</h4>
                                     <div className="recently-item">
-                                        <img src="/img/product1.jpeg" alt="detail" width="50px" />
-                                        <div>
+                                        <img src="/img/product1.jpeg" alt="detail" />
+                                        {/* <div>
                                             <span>فروش ویلای لوکس در رامسر</span>
                                             <span>10.000.000.000 تومان</span>
-                                        </div>
+                                        </div> */}
                                     </div>
                                     <div className="recently-item">
-                                        <img src="/img/product1.jpeg" alt="detail" width="50px" />
-                                        <div>
+                                        <img src="/img/product1.jpeg" alt="detail" />
+                                        {/* <div>
                                             <span>فروش زمین دو بر در رامسر</span>
                                             <span>10.000.000.000 تومان</span>
-                                        </div>
+                                        </div> */}
                                     </div>
                                     <div className="recently-item">
-                                        <img src="/img/product1.jpeg" alt="detail" width="50px" />
-                                        <div>
+                                        <img src="/img/product1.jpeg" alt="detail" />
+                                        {/* <div>
                                             <span>فروش ویلا 400متری در رامسر</span>
                                             <span>10.000.000.000 تومان</span>
+                                        </div> */}
+                                        <div className="property-detail">
+                                            <div className="product-detail">
+                                                <Link to="/" >2211444</Link>   <i className="fa-light fa-qrcode"></i>
+                                            </div>
+                                            <div className="product-detail">
+                                                <Link to="/" >شهری</Link>   <i className="fa-light fa-map-location-dot"></i>
+                                            </div>
+                                            <div className="product-detail">
+                                                <Link to="/" >2345</Link>    <i className="fa-light fa-earth-asia"></i>
+                                            </div>
+                                            <div className="product-detail">
+                                                <Link to="/" >527</Link>  <i className="fa-light fa-house-building"></i>
+                                            </div>
                                         </div>
                                     </div>
-                                    
+
                                 </div>
                                 <div className="fd-sidebar-item">
                                     <h4>Category</h4>
@@ -214,7 +224,7 @@ const FlatDetail = () => {
                                             <span>10.000.000.000 تومان</span>
                                         </div>
                                     </div>
-                                   
+
                                 </div>
                             </div>
                         </div>
@@ -225,4 +235,4 @@ const FlatDetail = () => {
     )
 }
 
-export default FlatDetail
+export default ShowProperty

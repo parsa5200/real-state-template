@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.scss';
-import { TopHeader, Header, Footer } from './components';
+import { TopHeader, Header, Footer, ShowProperty } from './components';
 import { Home, AllProductsList } from './screens'
 const App = () => {
   return (
@@ -11,6 +11,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/productsList" element={<AllProductsList />} />
+        <Route path="/flat/:slug" element={<ShowProperty />} />
       </Routes>
       <Footer />
     </BrowserRouter>
