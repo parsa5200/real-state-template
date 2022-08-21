@@ -191,7 +191,7 @@ const ShowProperty = () => {
                     height="450"
                     loading="lazy"
                   ></iframe>
-                </div>
+                </div>        
               </div>
               <div className="col-lg-4">
                 <div className="fd-sidebar-item">
