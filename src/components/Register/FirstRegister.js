@@ -24,10 +24,9 @@ const FirstRegister = ({nextStep, prevStep}) => {
     const submitHandler = event => {
         event.preventDefault();
         if (!Object.keys(errors).length) {
-            notify("شماره همراه ثبت شد", "success")
             nextStep()
         } else {
-            notify("لطفاً اطلاعات را تکمیل کنید", "error")
+            notify("لطفاً شماره را وارد کنید", "error")
             setTouched({
                 phoneNumber: true
             })

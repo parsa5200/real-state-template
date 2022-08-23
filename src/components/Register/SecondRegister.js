@@ -27,10 +27,9 @@ const SecondRegister = ({ nextStep, prevStep }) => {
     const submitHandler = event => {
         event.preventDefault();
         if (!Object.keys(errors).length) {
-            notify("ثبت نام با موفقیت انجام شد", "success")
             nextStep()
         } else {
-            notify("لطفاً اطلاعات را تکمیل کنید", "error")
+            notify("لطفاً اطلاعات را وارد کنید", "error")
             setTouched({
                 name: true,
                 lastName: true,

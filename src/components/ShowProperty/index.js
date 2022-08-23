@@ -359,6 +359,9 @@ const ShowProperty = () => {
                   </div>
                 </div> */}
               </div>
+              <div className="col">
+                
+              </div>
             </div>
           </div>
         </div>
