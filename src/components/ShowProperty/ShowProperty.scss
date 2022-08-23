@@ -11,6 +11,7 @@
     margin-bottom: 20px;
 
     .text-start {
+      text-align: right !important;
       .fd-address {
         margin: 0;
         margin-bottom: 25px;
@@ -70,17 +71,33 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    img{
+    text-align: center;
+    img {
       width: 200px;
       border-radius: 50%;
       padding: 10px;
       // background-color: #bc8e10;
       border: 1px solid #bc8e10;
     }
+    .profileText {
+      margin-top: 10px;
+      background-color: #f1c95b;
+      padding: 8px;
+      border-radius: 10px;
+      font-weight: 700;
+    }
+    .profilePhoneNumber {
+      margin-top: 10px;
+      background-color: #f1c95b;
+      padding: 5px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 500;
+    }
   }
 
   .recently-item {
-    margin: 20px 0;
+    margin: 23px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -164,7 +181,6 @@
 
   .image-gallery {
     .image-gallery-image {
-      max-width: fit-content;
       border-radius: 20px;
       box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     }

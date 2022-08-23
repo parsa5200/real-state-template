@@ -10,13 +10,7 @@ const Banner = () => {
     propertyType: null,
     sailType: null,
   });
-  const [isModalsOpen, setIsModalsOpen] = useState({
-    province: false,
-    city: false,
-    propertyType: false,
-    sailType: false,
-  });
-  console.table({ modalsValue, isModalsOpen });
+  
   return (
     <div className="banner">
       <div className="bg-custom">
@@ -77,7 +71,7 @@ const Banner = () => {
                         <Modal
                           open={openModal}
                           onClose={() => setOpenModal((prev) => !prev)}
-                          className="modalContainer"
+                          className=" "
                         >
                           <ProSearch className="searchOptionContainer" />
                         </Modal>

@@ -7,6 +7,23 @@ import 'react-toastify/dist/ReactToastify.css';
 import { FirstRegister, LoginStep, RegisterVerify, SecondRegister } from "../Register";
 const TopHeader = () => {
     const [openModal, setOpenModal] = useState(false);
+    const [singUpSteps, setSingUpSteps] = useState(1)
+
+    const RenderSignUpBody = () => {
+        switch (singUpSteps) {
+            case 1:
+                return <FirstRegister nextStep={() => setSingUpSteps(2)} />
+            case 2:
+                return <SecondRegister nextStep={() => setSingUpSteps(4)} prevStep={() => setSingUpSteps(1)} />
+            case 3:
+                return <LoginStep nextStep={() => setSingUpSteps(4)} prevStep={() => setSingUpSteps(1)} />
+            case 4:
+                return <RegisterVerify prevStep={() => setSingUpSteps(1)} />
+            default:
+                return <FirstRegister prevStep={() => console.log("prev")} />
+        }
+    }
+
     return (
         <div className={styles.headerIconContainer}>
             <div className='container d-flex justify-content-between align-items-center'>
@@ -17,13 +34,10 @@ const TopHeader = () => {
                         open={openModal}
                         onClose={() => setOpenModal((prev) => !prev)}
                         className={styles.modalContainer}>
-                        {/* <FirstRegister /> */}
-                        {/* <SecondRegister /> */}
-                        {/* <LoginStep /> */}
-                        <RegisterVerify />
+                        <RenderSignUpBody />
                     </Modal>
                 </div>
-               
+
                 <Link className={styles.navbarBrand} to="/">
                     <span>
                         شاویلا

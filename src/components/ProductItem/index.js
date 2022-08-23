@@ -40,7 +40,7 @@ const ProductItem = ({
             {description}
           </Link>
           <div className="description-detail">
-            <span className="item-price">{"تومان" + price}</span>
+            <span className="item-price"><p className="me-2">تومان </p>{price}</span>
             <span className="propertyType">{propertyType}</span>
           </div>
           <div className="item-icon">

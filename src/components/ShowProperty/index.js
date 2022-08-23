@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 const ShowProperty = () => {
   const images = [
     {
-      original: "/img/product1.jpeg",
-      thumbnail: "/img/product1.jpeg",
+      original: require("../../images/banner.jpg"),
+      thumbnail: require("../../images/banner.jpg"),
     },
     {
       original: "/img/banner.jpg",
@@ -34,11 +34,10 @@ const ShowProperty = () => {
               </div>
               <div className="text-start">
                 <p className="fd-address">
-                  <i className="fa-light fa-location-dot"></i>
-                  مازندران - رامسر{" "}
+                  مازندران - رامسر <i className="fa-light fa-location-dot"></i>
                 </p>
                 <span className="fd-address">
-                  <i className="fa-light fa-qrcode"></i>کد ملک : 44262{" "}
+                  کد ملک : 44262 <i className="fa-light fa-qrcode"></i>
                 </span>
               </div>
             </div>
@@ -191,18 +190,24 @@ const ShowProperty = () => {
                     height="450"
                     loading="lazy"
                   ></iframe>
-                </div>        
+                </div>
               </div>
               <div className="col-lg-4">
                 <div className="fd-sidebar-item">
                   <h4>پروفایل فروشنده</h4>
                   <div className="profileContainer">
-                  <img src="/img/profile.png" />
+                    <img src="/img/profile.png" />
+                    <span className="profileText">
+                      مهندس جعفر جعفریان <i className="fa-light fa-user"></i>
+                    </span>
+                    <span className="profilePhoneNumber">
+                      09381655200 <i className="fa-solid fa-phone-flip"></i>
+                    </span>
                   </div>
                 </div>
 
                 <div className="fd-sidebar-item">
-                  <h4>جدیدترین‌ها</h4>
+                  <h4>موارد پیشنهادی</h4>
                   <div className="recently-item">
                     <Link className="imageContainer" to="/">
                       <img src="/img/product1.jpeg" alt="detail" />
@@ -296,9 +301,40 @@ const ShowProperty = () => {
                       </div>
                     </div>
                   </div>
+                  <div className="recently-item">
+                    <Link className="imageContainer" to="/">
+                      <img src="/img/product1.jpeg" alt="detail" />
+
+                      <div className="hiddenContainer ">
+                        <span className="recently-title">فروش ویلا 400متری در رامسر</span>
+                        <span className="recently-price">10.000.000.000 تومان</span>
+                      </div>
+                    </Link>
+                    <div className="property-detail">
+                      <div className="product-detail">
+                        <Link to="/">1387</Link> <span>: سال بنا</span>
+                      </div>
+                      <div className="product-detail">
+                        <Link to="/">4</Link> <span>: خواب</span>
+                      </div>
+                      <div className="product-detail">
+                        <Link to="/">2345m</Link> <span>: متراژ</span>
+                      </div>
+                      <div className="product-detail">
+                        <Link to="/">125m</Link> <span>: زیربنا</span>
+                      </div>
+                      <div className="product-detail">
+                        <Link to="/">شهری</Link> <i className="fa-solid fa-map-location-dot ms-1"></i>
+                      </div>
+                      <div className="product-detail">
+                        <Link to="/">گیلان-لشت نشا</Link>
+                        <i className="fa-solid fa-location-dot ms-1"></i>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
-                <div className="fd-sidebar-item">
+                {/* <div className="fd-sidebar-item">
                   <h4>موارد مشابه</h4>
                   <div className="recently-item">
                     <img src="/img/product1.jpeg" alt="detail" width="50px" />
@@ -321,7 +357,7 @@ const ShowProperty = () => {
                       <span>10.000.000.000 تومان</span>
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

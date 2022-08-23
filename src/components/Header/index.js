@@ -12,7 +12,7 @@ const Header = () => {
                         <div >
                             <a className='socialIcon' ><i className="fa-brands fa-instagram"></i></a>
                             <a className='socialIcon' ><i className="fa-brands fa-whatsapp"></i></a>
-                            <a className='phoneIcon' ><i className="fa-light fa-phone-rotary"> 09381655200</i></a>
+                            <a className='phoneIcon' ><i className="fa-light fa-phone-rotary me-1"></i>09381655200</a>
                         </div>
                         <div className="collapse navbar-collapse" id="navbarNav">
                             <ul className="navbar-nav ms-auto">

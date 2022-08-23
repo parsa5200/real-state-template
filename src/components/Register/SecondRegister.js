@@ -3,7 +3,7 @@ import { CustomInput1 } from ".."
 import { validate } from "../validate"
 import 'react-toastify/dist/ReactToastify.css';
 import { notify } from "../toast"
-const SecondRegister = () => {
+const SecondRegister = ({ nextStep, prevStep }) => {
     const [data, setData] = useState({
         name: "",
         lastName: "",
@@ -28,6 +28,7 @@ const SecondRegister = () => {
         event.preventDefault();
         if (!Object.keys(errors).length) {
             notify("ثبت نام با موفقیت انجام شد", "success")
+            nextStep()
         } else {
             notify("لطفاً اطلاعات را تکمیل کنید", "error")
             setTouched({
@@ -42,7 +43,7 @@ const SecondRegister = () => {
         <div className='formContainer'>
             <form onSubmit={submitHandler}>
                 <div className='headerButton'>
-                    <button className='backButton' ><i class="fa-light fa-circle-chevron-left"></i></button>
+                    <i className="fa-solid fa-pen backButton" onClick={() => prevStep()}></i>
                     <span className='showNumber'>09381655200</span>
                 </div>
                 <h5 className='formLabel'>ثبت نام</h5>

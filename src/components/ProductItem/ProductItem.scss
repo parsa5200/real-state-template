@@ -106,7 +106,7 @@
       align-items: center;
       padding: 15px 0;
       .item-price {
-        display: block;
+        display: flex;
         font-weight: 500;
         font-size: 16px;
         color: #939597;
@@ -115,7 +115,7 @@
         display: block;
         font-weight: 500;
         font-size: 16px;
-        color: #fe4e00
+        color: #fe4e00;
       }
     }
   }
@@ -137,7 +137,7 @@
         text-decoration: none;
         color: #393e41;
       }
-      span{
+      span {
         color: #fe4e00;
       }
     }

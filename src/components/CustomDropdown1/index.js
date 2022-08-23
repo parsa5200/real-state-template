@@ -1,8 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import "./index.scss";
 import classNames from "classnames";
-const CustomDropDown1 = ({ title, className, itemsList,  onSelect, defaultValue, selected }) => {
-  console.log({ defaultValue, selected });
+const CustomDropDown1 = ({ title, className, itemsList, onSelect, defaultValue, selected }) => {
   //flag to show dropdown menu
   // const [isDropDownVisible, setIsDropDownVisible] = useState(false);
 
@@ -14,9 +13,7 @@ const CustomDropDown1 = ({ title, className, itemsList,  onSelect, defaultValue,
 
   useEffect(() => {
     document.addEventListener("mousedown", (e) => {
-      console.log({ menuRef });
-      if (!menuRef.current.contains(e.target)) {
-        console.warn("salam");
+      if (!menuRef?.current.contains(e.target)) {
         setIsOpen(false);
       }
     });

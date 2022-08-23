@@ -4,7 +4,7 @@ import { CustomInput1 } from "../../components"
 import { validate } from "../validate"
 import 'react-toastify/dist/ReactToastify.css';
 import { notify } from "../toast"
-const FirstRegister = () => {
+const FirstRegister = ({nextStep, prevStep}) => {
     const [data, setData] = useState({ phoneNumber: "" });
     const [errors, setErrors] = useState({});
     const [touched, setTouched] = useState({});
@@ -25,6 +25,7 @@ const FirstRegister = () => {
         event.preventDefault();
         if (!Object.keys(errors).length) {
             notify("شماره همراه ثبت شد", "success")
+            nextStep()
         } else {
             notify("لطفاً اطلاعات را تکمیل کنید", "error")
             setTouched({

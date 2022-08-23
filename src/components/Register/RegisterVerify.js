@@ -3,7 +3,7 @@ import { CustomInput1 } from "../../components"
 import { validate } from "../validate"
 import 'react-toastify/dist/ReactToastify.css';
 import { notify } from "../toast"
-const LoginStep = () => {
+const LoginStep = ({ nextStep, prevStep }) => {
     const [data, setData] = useState({ password: "" });
     const [errors, setErrors] = useState({});
     const [touched, setTouched] = useState({});
@@ -36,7 +36,7 @@ const LoginStep = () => {
         <div className='formContainer'>
             <form onSubmit={submitHandler}>
                 <div className='headerButton'>
-                    <button className='backButton' ><i class="fa-light fa-circle-chevron-left"></i></button>
+                    <i className="fa-solid fa-pen backButton" onClick={() => prevStep()}></i>
                     <span className='showNumber'>09381655200</span>
                 </div>
                 <span className='description'>کد تایید 6 رقمی برای شما ارسال شد</span>
@@ -56,8 +56,8 @@ const LoginStep = () => {
                     {errors.password && touched.password && <span className='errorText' >{errors.password}</span>}
                 </div>
                 <div className='notReceiveContainer' >
-                <span className='description'>کد را دریافت نکردید؟</span>
-                <span className='description me-2'>2:00 ارسال مجدد</span>
+                    <span className='description'>کد را دریافت نکردید؟</span>
+                    <span className='description me-2'>2:00 ارسال مجدد</span>
                 </div>
                 <div className='formButtons mt-2'>
                     <button className='registerButton' type='submit' >ورود</button>
