@@ -11,6 +11,8 @@
     cursor: pointer;
     position: relative;
     text-align: center;
+    font-size: 13px;
+    font-weight: 400;
     &::after {
       display: block;
       content: "";

@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #393e41;
+  background-color: #344E41;
 }
 
 .buttonContainer {
@@ -14,15 +14,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f1c95b;
-  color: #000;
+  background-color: #DAD7CD;
+  color: #606263;
   font-weight: bold;
   padding: 13px 30px;
   margin-left: 20px;
   text-decoration: none;
   transition: all 0.2s ease-in;
   &:hover {
-    background-color: #bc8e10;
+    background-color: #588157;
     color: whitesmoke;
   }
   &:focus {
@@ -52,15 +52,15 @@
     border-radius: 13px;
     content: "";
     box-sizing: border-box;
-    box-shadow: 0 0 0 3px #f1c95b;
+    box-shadow: 0 0 0 3px #A3B18A;
     top: 0;
     left: 0;
     opacity: 0;
     transition: 300ms;
   }
   &:hover {
-    background-color: #f1c95b;
-    color: #000;
+    background-color: #A3B18A;
+    color: #323435;
     font-weight: bold;
   }
   &:hover::after {

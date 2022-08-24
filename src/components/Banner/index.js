@@ -10,7 +10,7 @@ const Banner = () => {
     propertyType: null,
     sailType: null,
   });
-  
+
   return (
     <div className="banner">
       <div className="bg-custom">
@@ -59,22 +59,19 @@ const Banner = () => {
                           onSelect={(item) => setModalsValue({ ...modalsValue, sailType: item })}
                         />
                       </div>
-                      <div className="col-lg-2">
-                        <button className="btn-search">
-                          <i className="fa fa-search" aria-hidden="true"></i> جستجو{" "}
-                        </button>
-                      </div>
+
                       <div className="col-lg-2">
                         <a onClick={() => setOpenModal((prev) => !prev)} className="btn-search-option">
                           <i className="fa-light fa-filters"></i> جستجو پیشرفته{" "}
                         </a>
-                        <Modal
-                          open={openModal}
-                          onClose={() => setOpenModal((prev) => !prev)}
-                          className=" "
-                        >
+                        <Modal open={openModal} onClose={() => setOpenModal((prev) => !prev)} className=" ">
                           <ProSearch className="searchOptionContainer" />
                         </Modal>
+                      </div>
+                      <div className="col-lg-2">
+                        <button className="btn-search">
+                          <i className="fa fa-search" aria-hidden="true"></i> جستجو{" "}
+                        </button>
                       </div>
                     </div>
                   </form>

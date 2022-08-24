@@ -1,13 +1,10 @@
 .banner {
   display: flex;
   align-items: center;
-  min-height: 500px;
-  color: White;
-  background: #eff6ff no-repeat;
-  background-size: cover !important;
-  background-position: center !important;
+  min-height: 700px;
+  // color: White;
   position: relative;
-  background-image: url("../../images/banner3.jpg");
+  background: url("../../images/banner3.jpg") no-repeat center/cover;
   .bg-custom {
     position: absolute;
     background: rgb(29 34 43 / 55%);
@@ -40,10 +37,10 @@
           width: 100%;
           transition: all 0.2s ease-in;
           background: #f1c95b;
+          font-size: 13px;
           &:hover {
             background-color: #bc8e10;
             color: whitesmoke;
-            font-weight: bold;
           }
         }
         .btn-search-option {
@@ -58,6 +55,7 @@
           color: #F7F7F7;
           text-decoration: none;
           cursor: pointer;
+          font-size: 13px;
           &:hover {
             background-color: #BC8E10;
             color: whitesmoke;
