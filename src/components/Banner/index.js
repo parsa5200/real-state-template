@@ -49,6 +49,7 @@ const Banner = () => {
                           defaultValue={"همه‌ی مناطق"}
                           itemsList={dropDownData.PropertyType}
                           onSelect={(item) => setModalsValue({ ...modalsValue, propertyType: item })}
+                         
                         />
                       </div>
                       <div className="col-lg-2 ">

@@ -29,14 +29,13 @@ const CustomDropDown1 = ({ title, className, itemsList, onSelect, defaultValue, 
       >
         {!selected?.value ? defaultValue : selected.value}
       </div>
-      <div className={classNames("dd-itemHolder", { "scale-up-ver-top": isOpen })}>
+      <div className={classNames("dd-itemHolder", { "scale-up-ver-top": isOpen },"dropDown")}>
         {itemsList.map((item) => (
           <div
             key={item.value}
             onClick={() => {
               onSelect(item);
               setIsOpen(false);
-              // onClose();
             }}
           >
             {item.name}

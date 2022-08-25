@@ -32,13 +32,28 @@
     top: 15px;
   }
 
+  .dropDown {
+    top: 50px;
+  }
+  .dropRight {
+    left: 200px;
+    top: 0;
+  }
+  .dropTop {
+    bottom: 50px;
+  }
+  .dropLeft {
+    right: 200px;
+    top: 0;
+  }
+
   .dd-itemHolder {
     transform: scale(0);
     background-color: #fff;
     border-radius: 5px;
     border: 1px solid silver;
     position: absolute;
-    top: 60px;
+
     line-height: 0.7rem;
     width: 90%;
     z-index: 100;
