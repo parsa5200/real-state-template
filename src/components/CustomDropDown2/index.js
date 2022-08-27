@@ -1,14 +1,14 @@
 import classNames from "classnames";
 import React, { useState } from "react";
 import "./index.scss";
-function CustomDropDown2({ hasExternalTitle, icon, externalTitle, children, internalTitle, buttonColor }) {
+function CustomDropDown2({ hasExternalTitle, icon, externalTitle, children, internalTitle, buttonColor, hasTitle }) {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <section id="custom-dropdown-2">
       <div className="titleButton" style={{ backgroundColor: buttonColor }}>
         <div onClick={() => setIsOpen(!isOpen)} className="dd-button">
           <i className={icon}></i>
-          <span>{internalTitle}</span>
+          {hasTitle && <span className="internalTitle">{internalTitle}</span>}
         </div>
         {hasExternalTitle && <div className="externalTitle">{externalTitle}</div>}
       </div>

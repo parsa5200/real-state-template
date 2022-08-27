@@ -1,0 +1,33 @@
+#tableHeader-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  background-color: #1e1e2d;
+  padding: 0.3rem 0.9rem;
+  .headerDirection {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    line-height: 1.5rem;
+    font-size: .9rem;
+    color: #ffffff;
+  }
+  .navContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    button {
+      margin: 0 0.5rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 0.5rem;
+      transition: all 0.2s ease-in;
+      font-weight: 600;
+      &:hover {
+        background-color: dodgerblue;
+        color: #ffffff;
+      }
+    }
+  }
+}
