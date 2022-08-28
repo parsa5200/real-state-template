@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.scss";
-import { CustomDropDown2, CustomInput1 } from "../../components";
+import { SearchAndFilter, CustomDropDown2 } from "../../components";
 const TableHeaderNav = () => {
   return (
     <section id="tableHeader-container">
@@ -8,13 +8,13 @@ const TableHeaderNav = () => {
         <span>فیلترها</span>
         <span>اتحادیه-آژانس ها</span>
       </div>
-      <div className="navContainer">
-        <button>افزودن</button>
-        <CustomDropDown2 icon="fa-solid fa-arrow-down-short-wide"></CustomDropDown2>
-        <CustomInput1 icon="fa-light fa-magnifying-glass" />
+      <div className="desktopMood">
+        <SearchAndFilter hasFilter hasSearch hasAddButton />
       </div>
       <div className="humbuggerButton">
-        <i className="fa-solid fa-align-justify"></i>
+        <CustomDropDown2 icon="fa-solid fa-align-justify">
+          <SearchAndFilter hasFilter hasSearch hasAddButton />
+        </CustomDropDown2>
       </div>
     </section>
   );

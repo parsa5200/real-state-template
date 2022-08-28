@@ -14,3 +14,4 @@ export { default as Footer } from "./Footer";
 export { default as LoadingSvg } from "./LoadingSvg";
 export { default as CustomDropDown2 } from "./CustomDropDown2";
 export { default as TableHeaderNav } from "./TableHeaderNav";
+export { default as SearchAndFilter } from "./SearchAndFilter";

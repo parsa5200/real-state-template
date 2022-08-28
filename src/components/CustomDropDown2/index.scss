@@ -2,6 +2,11 @@
   position: relative;
   margin: 0 0.5rem;
 
+  @media screen and (max-width: 768px) {
+    #custom-dropdown-2 {
+      margin: 0.5rem 0;
+    }
+  }
   .titleButton {
     padding: 0.5rem;
     border-radius: 0.5rem;
@@ -36,7 +41,6 @@
     background-color: #fff;
     padding: 0.8rem;
     border-radius: 0.5rem;
-    width: 90%;
     border: 1px solid silver;
   }
 }
