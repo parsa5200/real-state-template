@@ -16,8 +16,8 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/productsList" element={<AllProductsList />} />
         <Route path="/flat/:slug" element={<ShowProperty />} />
-      </Routes> */}
-      {/* <Footer /> */}
+      </Routes>
+      <Footer /> */}
     </BrowserRouter>
   );
 };

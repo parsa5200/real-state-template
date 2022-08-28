@@ -10,8 +10,11 @@ const TableHeaderNav = () => {
       </div>
       <div className="navContainer">
         <button>افزودن</button>
-        <CustomDropDown2 icon="fa-solid fa-arrow-down-short-wide" />
+        <CustomDropDown2 icon="fa-solid fa-arrow-down-short-wide"></CustomDropDown2>
         <CustomInput1 icon="fa-light fa-magnifying-glass" />
+      </div>
+      <div className="humbuggerButton">
+        <i className="fa-solid fa-align-justify"></i>
       </div>
     </section>
   );
