@@ -18,7 +18,7 @@ const Banner = () => {
           <div className="row">
             <div className="col-lg-12 mx-auto">
               <div className="banner-area">
-                <p>با راهنمایی و پیشنهادهای تیم حرفه‌ای شاویلا </p>
+                <p className="banner-description">با راهنمایی و پیشنهادهای تیم حرفه‌ای شاویلا </p>
                 <h2 className="banner-title">
                   <strong> خانه رویایی خود را پیدا کنید</strong>{" "}
                 </h2>
@@ -49,7 +49,6 @@ const Banner = () => {
                           defaultValue={"همه‌ی مناطق"}
                           itemsList={dropDownData.PropertyType}
                           onSelect={(item) => setModalsValue({ ...modalsValue, propertyType: item })}
-                         
                         />
                       </div>
                       <div className="col-lg-2 ">

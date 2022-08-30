@@ -11,13 +11,13 @@ const App = () => {
       {/* <CustomDropDown2 icon="fa-solid fa-grid" internalTitle="dropdown" buttonColor="red">
        <FirstRegister/>
       </CustomDropDown2> */}
-      <TableHeaderNav />
-      {/* <Routes>
+      {/* <TableHeaderNav /> */}
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/productsList" element={<AllProductsList />} />
         <Route path="/flat/:slug" element={<ShowProperty />} />
       </Routes>
-      <Footer /> */}
+      <Footer />
     </BrowserRouter>
   );
 };
