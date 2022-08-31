@@ -64,7 +64,11 @@ const Banner = () => {
                         <a onClick={() => setOpenModal((prev) => !prev)} className="btn-search-option">
                           <i className="fa-light fa-filters"></i> جستجو پیشرفته{" "}
                         </a>
-                        <Modal open={openModal} onClose={() => setOpenModal((prev) => !prev)} className=" ">
+                        <Modal
+                          open={openModal}
+                          onClose={() => setOpenModal((prev) => !prev)}
+                          className="modalContainer"
+                        >
                           <ProSearch className="searchOptionContainer" />
                         </Modal>
                       </div>
