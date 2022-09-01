@@ -1,5 +1,10 @@
-// axios.get("http://eflare.ir/api/v1/villas").then((response) => {
-//   setData(response.data);
-//   setIsLoading(false);
-//   console.log(response.data);
-// });
+import customAxios from "../customAxios";
+const products = async () => {
+  try {
+    const resVillas = await customAxios.get("/villas");
+    return resVillas;
+  } catch (e) {
+    console.log({ e });
+  }
+};
+export default products;
