@@ -1,16 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { dropDownData } from "../dropDownData";
 import "./Banner.scss";
+import api from "../../api";
 import { CustomDropDown1, Modal, ProSearch } from "../../components";
 const Banner = () => {
   const [openModal, setOpenModal] = useState(false);
+  const [data, setData] = useState([]);
   const [modalsValue, setModalsValue] = useState({
     province: null,
     city: null,
     propertyType: null,
     sailType: null,
   });
+  const getProvince = async () => {
+    const products = await api.get.products();
+    console.log({ products });
+    setData(products.data);
+  };
 
+  useEffect(() => {
+    getProvince();
+  }, []);
   return (
     <div className="banner">
       <div className="bg-custom">
@@ -29,7 +39,10 @@ const Banner = () => {
                         <CustomDropDown1
                           selected={modalsValue.province}
                           defaultValue={"همه استان ها"}
-                          itemsList={dropDownData.State}
+                          // itemsList={dropDownData.State}
+                          itemsList={data.province.map((province) => {
+                            return( province.name)
+                          })}
                           onSelect={(item) => {
                             setModalsValue({ ...modalsValue, province: item });
                           }}

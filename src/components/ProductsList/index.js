@@ -13,7 +13,7 @@ const ProductsList = () => {
   const [isLoading, setIsLoading] = useState(true);
   const getProducts = async () => {
     const products = await api.get.products();
-    console.log({ products });
+    // console.log({ products });
     setData(products.data);
     setIsLoading(false);
   };

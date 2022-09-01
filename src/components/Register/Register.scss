@@ -8,7 +8,7 @@
     margin-bottom: 15px;
     .showNumber {
       font-size: 1.5rem;
-      color: #bc8e10;
+      color: #A3B18A;
       font-weight: 600;
     }
     .backButton {
@@ -21,7 +21,7 @@
       transition: all 0.2s ease-in;
       cursor: pointer;
       &:hover {
-        color: #f1c95b;
+        color: #588157;
       }
     }
   }
@@ -85,7 +85,7 @@
         padding: 2px 5px;
         color: #7c7c8b;
         font-size: 20px;
-        color: #f2d492;
+        color: #DAD7CD  ;
       }
       .formInput {
         font-weight: 400;
@@ -127,18 +127,18 @@
     align-items: center;
     flex-direction: column;
     .registerButton {
-      background-color: #f1c95b;
+      background-color: #445522;
       padding: 10px 65px;
-      color: #393e41;
+      color: #ffff;
       border-radius: 20px;
       border: none;
       font-size: 0.875rem;
-      font-weight: 600;
+      font-weight: 700;
       transition: all 0.2s ease-in;
       cursor: pointer;
       &:hover {
-        background-color: #bc8e10;
-        color: #fff;
+        background-color: #A3B18A;
+        color: #393e41;
       }
       &:focus {
         outline: none;
