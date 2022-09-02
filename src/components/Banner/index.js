@@ -39,10 +39,8 @@ const Banner = () => {
                         <CustomDropDown1
                           selected={modalsValue.province}
                           defaultValue={"همه استان ها"}
-                          // itemsList={dropDownData.State}
-                          itemsList={data.province.map((province) => {
-                            return( province.name)
-                          })}
+                          itemsList={dropDownData.State}
+                         
                           onSelect={(item) => {
                             setModalsValue({ ...modalsValue, province: item });
                           }}
