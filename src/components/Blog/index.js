@@ -1,4 +1,4 @@
-import BlogItem from "./BlogItem"
+import BlogItem from "../BlogItem"
 
 const Blog = () => {
     return (

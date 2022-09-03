@@ -29,7 +29,7 @@ const Header = () => {
                 </li>
                 <li className="nav-item">
                   <Link className="nav-link " to="/blog">
-                    وبلاگ
+                    مقالات
                   </Link>
                 </li>
                 <li className="nav-item">
