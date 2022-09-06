@@ -1,26 +1,27 @@
 import React from "react";
 import ImageGallery from "react-image-gallery";
 import "./ShowProperty.scss";
+import { SwiperImages } from "../../components";
 import { Link } from "react-router-dom";
 const ShowProperty = () => {
-  const images = [
-    {
-      original: require("../../images/banner.jpg"),
-      thumbnail: require("../../images/banner.jpg"),
-    },
-    {
-      original: "/img/banner.jpg",
-      thumbnail: "/img/banner.jpg",
-    },
-    {
-      original: "/img/banner3.jpg",
-      thumbnail: "/img/banner3.jpg",
-    },
-    {
-      original: "/img/product2.jpeg",
-      thumbnail: "/img/product2.jpeg",
-    },
-  ];
+  // const images = [
+  //   {
+  //     original: require("../../images/banner.jpg"),
+  //     thumbnail: require("../../images/banner.jpg"),
+  //   },
+  //   {
+  //     original: "/img/banner.jpg",
+  //     thumbnail: "/img/banner.jpg",
+  //   },
+  //   {
+  //     original: "/img/banner3.jpg",
+  //     thumbnail: "/img/banner3.jpg",
+  //   },
+  //   {
+  //     original: "/img/product2.jpeg",
+  //     thumbnail: "/img/product2.jpeg",
+  //   },
+  // ];
 
   return (
     <div className="property-detail">
@@ -41,7 +42,8 @@ const ShowProperty = () => {
                 </span>
               </div>
             </div>
-            <ImageGallery
+            <SwiperImages />
+            {/* <ImageGallery
               flickThreshold={0.5}
               slideDuration={0}
               items={images}
@@ -49,7 +51,7 @@ const ShowProperty = () => {
               showFullscreenButton={true}
               showBullets={true}
               showPlayButton={false}
-            />
+            /> */}
             <div className="row flex-row-reverse">
               <div className="col-lg-8">
                 <div className="fd-item fd-property-detail">
@@ -182,7 +184,7 @@ const ShowProperty = () => {
                     گیرد.
                   </p>
                 </div>
-                <div className="fd-item">
+                {/* <div className="fd-item">
                   <h4>Maps</h4>
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15105200.564429!2d37.91245092855647!3d38.99130948591772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b0155c964f2671%3A0x40d9dbd42a625f2a!2zVMO8cmtpeWU!5e0!3m2!1str!2str!4v1630158674074!5m2!1str!2str"
@@ -190,7 +192,7 @@ const ShowProperty = () => {
                     height="450"
                     loading="lazy"
                   ></iframe>
-                </div>
+                </div> */}
               </div>
               <div className="col-lg-4">
                 <div className="fd-sidebar-item">
@@ -359,9 +361,7 @@ const ShowProperty = () => {
                   </div>
                 </div> */}
               </div>
-              <div className="col">
-                
-              </div>
+              <div className="col"></div>
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 .footer {
   padding: 4rem 0 1rem 0;
-  background: #393E41;
+  background: #393e41;
   color: white;
   .FooterBrand {
     font-size: 30px;
@@ -74,7 +74,7 @@
     .footer-details {
       display: flex;
       justify-content: flex-end;
-      i{
+      i {
         color: #fe4e00;
         margin-left: 10px;
       }
@@ -94,5 +94,20 @@
         }
       }
     }
+  }
+  .madeIt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+padding-top: 1.5rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .contactUs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }

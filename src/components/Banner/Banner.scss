@@ -67,8 +67,14 @@
           cursor: pointer;
           font-size: 13px;
           &:hover {
-            background-color: #A3B18A;
+            background-color: #a3b18a;
             color: #393e41;
+          }
+        }
+        @media only screen and (min-width: 992px) and (max-width: 1199px) {
+          .btn-search-option {
+            padding: 15px 16px;
+            font-size: 12px;
           }
         }
         .modalContainer {

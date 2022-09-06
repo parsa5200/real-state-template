@@ -18,3 +18,4 @@ export { default as SearchAndFilter } from "./SearchAndFilter";
 export { default as ProductsMapItem } from "./ProductsMapItem";
 export { default as AboutUs } from "./AboutUs";
 export { default as Blog } from "./Blog";
+export { default as SwiperImages } from "./SwiperImages";

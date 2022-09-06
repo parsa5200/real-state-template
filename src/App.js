@@ -8,11 +8,11 @@ const App = () => {
       <TopHeader />
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/productsList" element={<AllProductsList />} />
         <Route path="/flat/:slug" element={<ShowProperty />} />
+        <Route path="/productsList" element={<AllProductsList />} />
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<Blogs />} />
+        <Route path="/" element={<Home />} />
       </Routes>
       <Footer />
     </BrowserRouter>

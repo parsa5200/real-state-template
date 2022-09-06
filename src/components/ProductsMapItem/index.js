@@ -5,6 +5,7 @@ import { LoadingSvg, ProductItem } from "../../components";
 function ProductsMapItem() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+ 
   const getProducts = async () => {
     const products = await api.get.products();
     setData(products.data);

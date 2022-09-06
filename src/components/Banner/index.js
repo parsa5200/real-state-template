@@ -5,7 +5,7 @@ import api from "../../api";
 import { CustomDropDown1, Modal, ProSearch } from "../../components";
 const Banner = () => {
   const [openModal, setOpenModal] = useState(false);
-  const [data, setData] = useState([]);
+  const [stateData, setStateData] = useState(dropDownData.State);
   const [modalsValue, setModalsValue] = useState({
     province: null,
     city: null,
@@ -14,8 +14,14 @@ const Banner = () => {
   });
   const getProvince = async () => {
     const products = await api.get.products();
-    console.log({ products });
-    setData(products.data);
+    let newProvinces = [];
+    products.data.provinces.map((pr) => {
+      newProvinces.push({
+        name: pr.name,
+        value: pr.id,
+      });
+    });
+    setStateData(newProvinces);
   };
 
   useEffect(() => {
@@ -39,8 +45,7 @@ const Banner = () => {
                         <CustomDropDown1
                           selected={modalsValue.province}
                           defaultValue={"همه استان ها"}
-                          itemsList={dropDownData.State}
-                         
+                          itemsList={stateData}
                           onSelect={(item) => {
                             setModalsValue({ ...modalsValue, province: item });
                           }}
