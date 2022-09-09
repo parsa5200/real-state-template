@@ -1,8 +1,8 @@
 import React from "react";
 import api from "../../api";
 import { useState, useEffect } from "react";
-import { LoadingSvg, ProductItem } from "../../components";
-function ProductsMapItem() {
+import { LoadingSvg, ProductItem } from "..";
+function VillaMapItem() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
  
@@ -49,4 +49,4 @@ function ProductsMapItem() {
   );
 }
 
-export default ProductsMapItem;
+export default VillaMapItem;

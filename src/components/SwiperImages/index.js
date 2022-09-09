@@ -1,20 +1,26 @@
-// import { useRef } from "react";
-import { useState, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
+// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
 import "swiper/css";
-import { EffectFade, Navigation } from "swiper";
-import "swiper/css/navigation";
 import "swiper/css/effect-fade";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import "./index.scss";
+// import required modules
+import { EffectFade, Navigation, Pagination } from "swiper";
+
+//import api & loading
 import api from "../../api";
 import { LoadingSvg } from "../../components";
-function SwiperImages() {
+
+const SwiperImages = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [imageData, setImageData] = useState([]);
 
   const getImages = async () => {
     const images = await api.get.products();
-    console.log({ parsa: images });
     setImageData(images.data);
     setIsLoading(false);
   };
@@ -32,8 +38,18 @@ function SwiperImages() {
   }
   return (
     <section>
-      <Swiper modules={[Navigation, EffectFade]} navigation effect speed={800}>
-        {imageData.properties.map((img,index) => {
+      <Swiper
+        dir="rtl"
+        spaceBetween={30}
+        navigation={true}
+        effect={"fade"}
+        pagination={{
+          dynamicBullets: true,
+          clickable: true,
+        }}
+        modules={[Navigation, Pagination, EffectFade]}
+      >
+        {imageData.properties.map((img) => {
           return (
             <SwiperSlide key={img.id}>
               <img src={"http://eflare.ir" + img.images[0].path_thumbnail} alt={img.images.id} />
@@ -43,6 +59,5 @@ function SwiperImages() {
       </Swiper>
     </section>
   );
-}
-
+};
 export default SwiperImages;

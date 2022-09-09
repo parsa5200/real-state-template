@@ -143,7 +143,6 @@
     }
   }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
-
     .item-icon {
       font-size: 7px;
       .product-detail {
@@ -154,7 +153,10 @@
     }
   }
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
-
+    .item-description {
+      .item-title {
+       font-size: 17px;      }
+    }
     .item-icon {
       font-size: 7px;
       .product-detail {

@@ -38,22 +38,6 @@ const Header = () => {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="#">
-                    نوع ملک <i className="fas fa-chevron-down"></i>
-                  </Link>
-                  <ul className="sub-ul">
-                    <li>
-                      <Link to="#">آپارتمان</Link>
-                    </li>
-                    <li>
-                      <Link to="#">ویلا</Link>
-                    </li>
-                    <li>
-                      <Link to="#">زمین</Link>
-                    </li>
-                  </ul>
-                </li>
-                <li className="nav-item">
                   <Link className="nav-link" to="/">
                     خانه
                   </Link>

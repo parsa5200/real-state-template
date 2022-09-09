@@ -1,28 +1,10 @@
 import React from "react";
-import ImageGallery from "react-image-gallery";
 import "./ShowProperty.scss";
 import { SwiperImages } from "../../components";
+import "swiper/css/bundle";
 import { Link } from "react-router-dom";
 const ShowProperty = () => {
-  // const images = [
-  //   {
-  //     original: require("../../images/banner.jpg"),
-  //     thumbnail: require("../../images/banner.jpg"),
-  //   },
-  //   {
-  //     original: "/img/banner.jpg",
-  //     thumbnail: "/img/banner.jpg",
-  //   },
-  //   {
-  //     original: "/img/banner3.jpg",
-  //     thumbnail: "/img/banner3.jpg",
-  //   },
-  //   {
-  //     original: "/img/product2.jpeg",
-  //     thumbnail: "/img/product2.jpeg",
-  //   },
-  // ];
-
+ 
   return (
     <div className="property-detail">
       <div className="container mt-3 mb-5">
@@ -43,15 +25,7 @@ const ShowProperty = () => {
               </div>
             </div>
             <SwiperImages />
-            {/* <ImageGallery
-              flickThreshold={0.5}
-              slideDuration={0}
-              items={images}
-              showNav={true}
-              showFullscreenButton={true}
-              showBullets={true}
-              showPlayButton={false}
-            /> */}
+  
             <div className="row flex-row-reverse">
               <div className="col-lg-8">
                 <div className="fd-item fd-property-detail">
@@ -184,7 +158,7 @@ const ShowProperty = () => {
                     گیرد.
                   </p>
                 </div>
-                {/* <div className="fd-item">
+                <div className="fd-item">
                   <h4>Maps</h4>
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15105200.564429!2d37.91245092855647!3d38.99130948591772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b0155c964f2671%3A0x40d9dbd42a625f2a!2zVMO8cmtpeWU!5e0!3m2!1str!2str!4v1630158674074!5m2!1str!2str"
@@ -192,7 +166,7 @@ const ShowProperty = () => {
                     height="450"
                     loading="lazy"
                   ></iframe>
-                </div> */}
+                </div>
               </div>
               <div className="col-lg-4">
                 <div className="fd-sidebar-item">
@@ -221,16 +195,16 @@ const ShowProperty = () => {
                     </Link>
                     <div className="property-detail">
                       <div className="product-detail">
-                        <Link to="/">1387</Link> <span>: سال بنا</span>
+                        <Link to="/">1387</Link> <i className="fas fa-digging"></i>
                       </div>
                       <div className="product-detail">
-                        <Link to="/">4</Link> <span>: خواب</span>
+                        <Link to="/">4</Link> <i className="fas fa-bed-alt"></i>
                       </div>
                       <div className="product-detail">
-                        <Link to="/">2345m</Link> <span>: متراژ</span>
+                        <Link to="/">2345m</Link> <i className="fas fa-globe-asia"></i>
                       </div>
                       <div className="product-detail">
-                        <Link to="/">125m</Link> <span>: زیربنا</span>
+                        <Link to="/">125m</Link> <i className="fas fa-home-lg"></i>
                       </div>
                       <div className="product-detail">
                         <Link to="/">شهری</Link> <i className="fa-solid fa-map-location-dot ms-1"></i>
@@ -252,22 +226,22 @@ const ShowProperty = () => {
                     </Link>
                     <div className="property-detail">
                       <div className="product-detail">
-                        <Link to="/">1387</Link> <span>: سال بنا</span>
+                        <Link to="/">1387</Link> <i className="fas fa-digging"></i>
                       </div>
                       <div className="product-detail">
-                        <Link to="/">4</Link> <span>: خواب</span>
+                        <Link to="/">4</Link> <i className="fas fa-bed-alt"></i>
                       </div>
                       <div className="product-detail">
-                        <Link to="/">2345m</Link> <span>: متراژ</span>
+                        <Link to="/">2345m</Link> <i className="fas fa-globe-asia"></i>
                       </div>
                       <div className="product-detail">
-                        <Link to="/">125m</Link> <span>: زیربنا</span>
+                        <Link to="/">125m</Link> <i className="fas fa-home-lg"></i>
                       </div>
                       <div className="product-detail">
                         <Link to="/">شهری</Link> <i className="fa-solid fa-map-location-dot ms-1"></i>
                       </div>
                       <div className="product-detail">
-                        <Link to="/">گیلان-ماسوله</Link>
+                        <Link to="/">گیلان-رشت</Link>
                         <i className="fa-solid fa-location-dot ms-1"></i>
                       </div>
                     </div>
@@ -283,22 +257,22 @@ const ShowProperty = () => {
                     </Link>
                     <div className="property-detail">
                       <div className="product-detail">
-                        <Link to="/">1387</Link> <span>: سال بنا</span>
+                        <Link to="/">1387</Link> <i className="fas fa-digging"></i>
                       </div>
                       <div className="product-detail">
-                        <Link to="/">4</Link> <span>: خواب</span>
+                        <Link to="/">4</Link> <i className="fas fa-bed-alt"></i>
                       </div>
                       <div className="product-detail">
-                        <Link to="/">2345m</Link> <span>: متراژ</span>
+                        <Link to="/">2345m</Link> <i className="fas fa-globe-asia"></i>
                       </div>
                       <div className="product-detail">
-                        <Link to="/">125m</Link> <span>: زیربنا</span>
+                        <Link to="/">125m</Link> <i className="fas fa-home-lg"></i>
                       </div>
                       <div className="product-detail">
                         <Link to="/">شهری</Link> <i className="fa-solid fa-map-location-dot ms-1"></i>
                       </div>
                       <div className="product-detail">
-                        <Link to="/">گیلان-لشت نشا</Link>
+                        <Link to="/">گیلان-رشت</Link>
                         <i className="fa-solid fa-location-dot ms-1"></i>
                       </div>
                     </div>
@@ -314,52 +288,30 @@ const ShowProperty = () => {
                     </Link>
                     <div className="property-detail">
                       <div className="product-detail">
-                        <Link to="/">1387</Link> <span>: سال بنا</span>
+                        <Link to="/">1387</Link> <i className="fas fa-digging"></i>
                       </div>
                       <div className="product-detail">
-                        <Link to="/">4</Link> <span>: خواب</span>
+                        <Link to="/">4</Link> <i className="fas fa-bed-alt"></i>
                       </div>
                       <div className="product-detail">
-                        <Link to="/">2345m</Link> <span>: متراژ</span>
+                        <Link to="/">2345m</Link> <i className="fas fa-globe-asia"></i>
                       </div>
                       <div className="product-detail">
-                        <Link to="/">125m</Link> <span>: زیربنا</span>
+                        <Link to="/">125m</Link> <i className="fas fa-home-lg"></i>
                       </div>
                       <div className="product-detail">
                         <Link to="/">شهری</Link> <i className="fa-solid fa-map-location-dot ms-1"></i>
                       </div>
                       <div className="product-detail">
-                        <Link to="/">گیلان-لشت نشا</Link>
+                        <Link to="/">گیلان-رشت</Link>
                         <i className="fa-solid fa-location-dot ms-1"></i>
                       </div>
                     </div>
                   </div>
+            
                 </div>
 
-                {/* <div className="fd-sidebar-item">
-                  <h4>موارد مشابه</h4>
-                  <div className="recently-item">
-                    <img src="/img/product1.jpeg" alt="detail" width="50px" />
-                    <div>
-                      <span>فروش ویلای لوکس در رامسر</span>
-                      <span>10.000.000.000 تومان</span>
-                    </div>
-                  </div>
-                  <div className="recently-item">
-                    <img src="/img/product1.jpeg" alt="detail" width="50px" />
-                    <div>
-                      <span>فروش زمین دو بر در رامسر</span>
-                      <span>10.000.000.000 تومان</span>
-                    </div>
-                  </div>
-                  <div className="recently-item">
-                    <img src="/img/product1.jpeg" alt="detail" width="50px" />
-                    <div>
-                      <span>فروش ویلا 400متری در رامسر</span>
-                      <span>10.000.000.000 تومان</span>
-                    </div>
-                  </div>
-                </div> */}
+     
               </div>
               <div className="col"></div>
             </div>
