@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import "./ProductItem.scss";
-const ProductItem = ({
+import "./ApartmentItems.scss";
+const ApartmentItems = ({
   slug,
   image,
   description,
@@ -8,10 +8,10 @@ const ProductItem = ({
   propertyCode,
   propertyState,
   propertyCity,
-  foundation,
-  landSize,
+  PricePerMeter,
+  unitSize,
   locationType,
-  constructionYear,
+  unitFloor,
   bedNumber,
   propertyType,
 }) => {
@@ -48,16 +48,16 @@ const ProductItem = ({
           </div>
           <div className="item-icon">
             <div className="product-detail">
-              <Link to={`/flat/${slug}`}>{constructionYear}</Link> <span>: سال ساخت</span>
+              <Link to={`/flat/${slug}`}>{unitSize}m</Link> <span>: متراژ</span>
+            </div>
+            <div className="product-detail">
+              <Link to={`/flat/${slug}`}>{unitFloor}</Link> <span>: طبقه</span>
             </div>
             <div className="product-detail">
               <Link to={`/flat/${slug}`}>{bedNumber}</Link> <span>: خواب</span>
             </div>
             <div className="product-detail">
-              <Link to={`/flat/${slug}`}>{landSize}m</Link> <span>: متراژ</span>
-            </div>
-            <div className="product-detail">
-              <Link to={`/flat/${slug}`}>{foundation}m</Link> <span>: زیر بنا</span>
+              <Link to={`/flat/${slug}`}>{PricePerMeter}m</Link> <span>: متری</span>
             </div>
           </div>
         </div>
@@ -66,8 +66,4 @@ const ProductItem = ({
   );
 };
 
-export default ProductItem;
-
-{
-  /* <Link className="" to={`/flat/${slug}`}>{propertyCode} <span>کد ملک</span></Link> */
-}
+export default ApartmentItems;

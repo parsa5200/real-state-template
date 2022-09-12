@@ -1,10 +1,10 @@
 import customAxios from "../customAxios";
-const products = async () => {
+const landProduct = async () => {
   try {
-    const res = await customAxios.get("/villas");
+    const res = await customAxios.get("/lands");
     return res;
   } catch (e) {
     console.log({ e });
   }
 };
-export default products;
+export default landProduct;

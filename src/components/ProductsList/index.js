@@ -1,4 +1,4 @@
-import { TitleComponents, VillaMapItem } from "../../components";
+import { TitleComponents, VillaMapItem, ApartmentMapItems, LandMapItems } from "../../components";
 import "./ProductsList.scss";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -32,11 +32,14 @@ const ProductsList = () => {
         </div>
         <div className="property-content ">
           <div className={toggleState === "villa" ? "content active-content" : "content"}>
-            {" "}
             <VillaMapItem />
           </div>
-          <div className={toggleState === "land" ? "content active-content" : "content"}>land</div>
-          <div className={toggleState === "apartment" ? "content  active-content" : "content"}>apartment</div>
+          <div className={toggleState === "land" ? "content active-content" : "content"}>
+            <LandMapItems />
+          </div>
+          <div className={toggleState === "apartment" ? "content  active-content" : "content"}>
+            <ApartmentMapItems />
+          </div>
         </div>
 
         <div className="d-flex justify-content-center">
